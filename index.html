@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- SEO -->
+<title>TERRA v2.3 – PWA del Passaporto Etico Digitale (acronimo PED)</title>
+<meta name="description" content="TERRA v2.3 è la PWA del progetto Passaporto Etico Digitale (acronimo PED): trasparenza delle etichette food/non food per una consapevolezza di un consumo etico e sostenibile.">
+<meta name="keywords" content="passaporto etico digitale, PED, pwa TERRA v2.3, prodotti sostenibili, trasparenza prodotti, consumo etico, PWA, sostenibilità">
+<meta name="author" content="Passaporto Etico Digitale (acronimo PED) di Marzia Neggia">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="pwa TERRA v2.3 – Passaporto Etico Digitale (acronimo PED)">
+<meta property="og:description" content="Il sistema progettato per restituire al consumatore la conoscenza che va oltre l'etichetta, per un consumo il più etico e sostenibile possibile.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pwa-terra-v23.vercel.app">
+
+<style>
+/* Font locali - nessuna chiamata a Google */
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('AtkinsonHyperlegible-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('AtkinsonHyperlegible-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('AtkinsonHyperlegible-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('AtkinsonHyperlegible-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  background-color: #f5f0e8;
+  color: #2d4121;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 50px 80px 50px;
+}
+
+/* HEADER */
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 40px 0;
+  width: 100%;
+}
+
+.nav-links { display: -webkit-box; display: -ms-flexbox; display: flex; list-style: none; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; width: 100%; }
+.nav-links li { margin-left: 0; }
+.nav-links a {
+  text-decoration: none;
+  color: #2d4121;
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.nav-links a:hover { opacity: 0.7; }
+
+/* MAIN layout due colonne */
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 80vh;
+  gap: 60px;
+}
+
+/* COLONNA SINISTRA - immagine */
+.hero-left {
+  -webkit-box-flex: 1.2;
+  -ms-flex: 1.2;
+  flex: 1.2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/* protezione logo */
+.logo-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 90%;
+}
+.logo-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+/* filigrana */
+.logo-wrapper:after {
+  content: 'TERRA v2.3 \00A9 PED';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-30deg);
+  -ms-transform: translate(-50%, -50%) rotate(-30deg);
+  transform: translate(-50%, -50%) rotate(-30deg);
+  font-size: 26px;
+  font-weight: 700;
+  color: rgba(45, 65, 33, 0.08);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 3;
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+/* COLONNA DESTRA - testo centrato */
+.hero-right {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 72px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: 5px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+}
+
+.tagline {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 16px;
+  text-transform: lowercase;
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+
+.tagline-bold {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.description {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #1a1a1a;
+  margin-bottom: 40px;
+  max-width: 480px;
+  text-align: center;
+}
+
+/* bottoni centrati sulla stessa riga */
+.btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 35px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid #2d4121;
+  border-radius: 0;
+  cursor: pointer;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  background: none;
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  white-space: nowrap;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.btn:hover { opacity: 0.72; }
+.btn-green { background-color: #2d4121; color: #ffffff; }
+.btn-outline { color: #2d4121; }
+
+/* TABLET */
+@media screen and (max-width: 1024px) {
+  main { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; gap: 30px; }
+  header { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+  .nav-links { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+  .nav-links li { margin: 8px 12px; }
+  .hero-left { width: 100%; }
+  .logo-wrapper { width: 65%; }
+  .hero-right { width: 100%; padding-top: 0; }
+  h1 { font-size: 48px; }
+}
+
+/* MOBILE */
+@media screen and (max-width: 600px) {
+  .container { padding: 0 20px 60px 20px; }
+  h1 { font-size: 32px; letter-spacing: 2px; }
+  .logo-wrapper { width: 85%; }
+  .btn-group { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; width: 100%; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+  .btn { width: 100%; max-width: 300px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <nav aria-label="Menu principale">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="informazioni.html">Informazioni</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+        <li><a href="crediti.html">Crediti</a></li>
+        <li><a href="#">Accedi</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero-left">
+      <div class="logo-wrapper">
+        <img src="nuovo logo TERRA v2_3 sfondo trasparente.png"
+             alt="pwa TERRA v2.3 – Logo del Passaporto Etico Digitale (acronimo PED)"
+             draggable="false"
+             width="600" height="600">
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <h1>TERRA V2.3</h1>
+      <p class="tagline">pwa del progetto</p>
+      <p class="tagline-bold">Passaporto Etico Digitale (acronimo PED)</p>
+      <p class="description">
+        TERRA v2.3 è la PWA del progetto indipendente in pre-seed chiamato PASSAPORTO ETICO DIGITALE (acronimo PED).<br><br>
+        Il progetto mira alla trasparenza delle etichette dei prodotti food/non food (e non solo). Il sistema è progettato per restituire al consumatore la conoscenza che va oltre l'etichetta, per un consumo il più etico e sostenibile possibile.
+      </p>
+      <div class="btn-group">
+        <a href="https://mastodon.uno/@terraped" target="_blank" rel="noopener noreferrer" class="btn btn-green">Mastodon</a>
+        <a href="https://www.linkedin.com/company/112811957" target="_blank" rel="noopener noreferrer" class="btn btn-green">LinkedIn</a>
+        <button type="button" onclick="checkPassword()" class="btn btn-outline">Password</button>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+/* blocco tasto destro */
+document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+
+/* blocco drag */
+document.addEventListener('dragstart', function(e) { e.preventDefault(); });
+
+/* blocco scorciatoie */
+document.addEventListener('keydown', function(e) {
+  if ((e.ctrlKey || e.metaKey) && ['s','p','u','i','j','c'].includes(e.key.toLowerCase())) { e.preventDefault(); }
+  if (e.key === 'F12') { e.preventDefault(); }
+  if (e.ctrlKey && e.shiftKey && ['i','j','c'].includes(e.key.toLowerCase())) { e.preventDefault(); }
+});
+
+/* ⬇️ CAMBIA SOLO QUESTA RIGA: sostituisci mannaggia con la tua password */
+var passwordCorretta = "mannaggia";
+
+function checkPassword() {
+  var input = prompt("Inserisci la password per accedere:");
+  if (input === null) return;
+  if (input === passwordCorretta) {
+    alert("Accesso consentito! Benvenuta in TERRA v2.3.");
+  } else {
+    alert("Password errata. Riprova.");
+  }
+}
+</script>
+
+</body>
+</html>
