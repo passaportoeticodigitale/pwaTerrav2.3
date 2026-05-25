@@ -25,9 +25,9 @@
     'outline-offset:4px;',
     'border-radius:2px;}',
 
-    /* FOCUS VISIBILE - bottoni pieni (sfondo scuro) */
+    /* FOCUS VISIBILE - bottoni pieni (sfondo verde medio) */
     '.btn-green:focus-visible{',
-    'outline:3px solid #97c459;',
+    'outline:3px solid #2d4121;',
     'outline-offset:4px;}',
 
     /* rimuove outline di default solo se focus-visible è supportato */
