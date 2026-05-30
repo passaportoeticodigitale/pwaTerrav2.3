@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- SEO -->
+<title>Informazioni sul Passaporto Etico Digitale (acronimo PED) e la sua pwa TERRA v2.3</title>
+<meta name="description" content="Scopri il progetto Passaporto Etico Digitale (acronimo PED) e la PWA TERRA v2.3: trasparenza, sostenibilità e consumo consapevole per tutti e tutte.">
+<meta name="keywords" content="passaporto etico digitale, PED, pwa TERRA v2.3, prodotti sostenibili, trasparenza prodotti, consumo etico, PWA, sostenibilità, vegan, cruelty free, supply chain, additivi, pesticidi, diritti umani, inclusione">
+<meta name="author" content="Passaporto Etico Digitale (acronimo PED) di Marzia Neggia">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="pwa TERRA v2.3 – Passaporto Etico Digitale (acronimo PED)">
+<meta property="og:description" content="Il sistema progettato per restituire al consumatore e alla consumatrice la conoscenza che va oltre l'etichetta, per un consumo il più etico e sostenibile possibile.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pwa-terra-v23.vercel.app/informazioni.html">
+
+<style>
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('AtkinsonHyperlegible-Regular.ttf') format('truetype');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('AtkinsonHyperlegible-Bold.ttf') format('truetype');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('AtkinsonHyperlegible-Italic.ttf') format('truetype');
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('AtkinsonHyperlegible-BoldItalic.ttf') format('truetype');
+  font-weight: 700; font-style: italic; font-display: swap;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  background-color: #f5f0e8;
+  color: #2d4121;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 50px 80px 50px;
+}
+
+/* HEADER */
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 40px 0;
+  width: 100%;
+}
+
+.nav-links { display: -webkit-box; display: -ms-flexbox; display: flex; list-style: none; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; width: 100%; }
+.nav-links li { margin-left: 0; }
+nav { width: 85%; }
+
+.nav-links a {
+  text-decoration: none;
+  color: #2d4121;
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.nav-links a:hover { opacity: 0.7; }
+
+/* MAIN */
+main {
+  display: block;
+  padding-top: 20px;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+}
+
+/* INDICE */
+.indice {
+  border: 1.5px solid rgba(45, 65, 33, 0.22);
+  background: rgba(255, 255, 255, 0.45);
+  padding: 26px;
+  margin-bottom: 40px;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.indice-parte {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #2d4121;
+  margin-bottom: 10px;
+  margin-top: 18px;
+}
+
+.indice-parte:first-child { margin-top: 0; }
+
+.indice ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.indice ol li {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #1a1a1a;
+}
+
+.indice ol li a {
+  color: #2d4121;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.indice ol li a:hover { opacity: 0.7; }
+
+/* CARD */
+.card {
+  border: 1.5px solid rgba(45, 65, 33, 0.22);
+  background: rgba(255, 255, 255, 0.45);
+  padding: 26px;
+  margin-bottom: 24px;
+}
+
+.card-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.card-title {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #2d4121;
+}
+
+.card-sottotitolo {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: italic;
+  color: #1a1a1a;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* LAYOUT IMMAGINE + TESTO */
+.card-body {
+  overflow: hidden;
+}
+
+.card-img {
+  float: left;
+  width: 28%;
+  height: auto;
+  margin-right: 24px;
+  margin-bottom: 12px;
+  display: block;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
+.card-testo {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #1a1a1a;
+}
+
+.card-testo p { margin-bottom: 14px; }
+.card-testo p:last-child { margin-bottom: 0; }
+
+.card-testo a {
+  color: #2d4121;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* TABLET */
+@media screen and (max-width: 1024px) {
+  header { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+  .nav-links { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+  .nav-links li { margin: 8px 12px; }
+  h1 { font-size: 28px; }
+  .card-img { width: 40%; }
+}
+
+/* MOBILE */
+@media screen and (max-width: 600px) {
+  .container { padding: 0 20px 60px 20px; }
+  h1 { font-size: 22px; letter-spacing: 2px; }
+  .card-img { float: none; width: 70%; margin: 0 auto 16px auto; }
+  .card-header { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; gap: 4px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <nav aria-label="Menu principale">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="informazioni.html">Informazioni</a></li>
+        <li><a href="https://www.linkedin.com/company/112811957" target="_blank" rel="noopener noreferrer">Blog</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+        <li><a href="sostieni.html">Sostieni</a></li>
+        <li><a href="crediti.html">Crediti</a></li>
+        <li><a href="#">Accedi</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <h1>Informazioni</h1>
+
+    <!-- INDICE -->
+    <div class="indice">
+      <div class="indice-parte">Parte 1: Il Progetto</div>
+      <ol>
+        <li>1. <a href="#chi-sono">Chi Sono</a></li>
+        <li>2. <a href="#passaporto">Passaporto Etico Digitale</a></li>
+        <li>3. <a href="#pwa">L'applicazione: pwa TERRA v2.3</a></li>
+        <li>4. <a href="#consumatori">Per le consumatrici e i consumatori</a></li>
+        <li>5. <a href="#investitori">Per Business Angel, Investitrici e Investitori, Sostenitrici e Sostenitori</a></li>
+      </ol>
+      <div class="indice-parte">Parte 2:</div>
+      <ol>
+        <li>6. <a href="#accessibilita">Nota tecnica sull'accessibilità del sito</a></li>
+      </ol>
+    </div>
+
+    <!-- 1. CHI SONO -->
+    <div class="card" id="chi-sono">
+      <div class="card-header">
+        <span class="card-title">1. Chi Sono</span>
+        <span class="card-sottotitolo">(Origine)</span>
+      </div>
+      <div class="card-body">
+        <div class="card-testo">
+          <p>Il mio nome è Marzia. Questo progetto nasce casualmente nel dicembre 2025. Stavo frequentando un corso HACCP e molte curiosità hanno iniziato a saltare per la mente. Così ho preso la prima IA che avevo a disposizione (Gemini) e ho iniziato a utilizzarla. Un pò alla volta l'ho istruita per leggere le etichette dell'ortofrutta sfusa. Poi le mie esperienze nei diritti umani e culturali, la mia passione per l'etica, la sostenibilità e innovazione digitale hanno fatto il resto. Per tre mesi ho istruito il mio cobot, fino a scoprire che avevo creato un progetto vero e proprio: il Passaporto Etico Digitale, o PED per abbreviare.</p>
+          <p>Lavoro in modo indipendente, con il supporto di alcune intelligenze artificiali, per costruire strumenti utili e accessibili a tutte e tutti.</p>
+          <p>Il Passaporto Etico Digitale e la pwa TERRA v2.3 nascono da questa visione: mettere la consapevolezza nelle mani di chi, ogni giorno, fa scelte di consumo, grandi e piccole, che hanno un impatto reale su questo bellissimo pianeta.</p>
+          <p>Credo profondamente che tecnologia ed etica possano — e debbano — camminare insieme. Per questo sto costruendo questo progetto, passo dopo passo.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. PASSAPORTO ETICO DIGITALE -->
+    <div class="card" id="passaporto">
+      <div class="card-header">
+        <span class="card-title">2. Passaporto Etico Digitale</span>
+        <span class="card-sottotitolo">(Visione)</span>
+      </div>
+      <div class="card-body">
+        <img src="logo PED.png"
+             alt="Logo del Passaporto Etico Digitale (acronimo PED) copyright Marzia Neggia"
+             draggable="false"
+             class="card-img">
+        <div class="card-testo">
+          <p>Il Passaporto Etico Digitale (acronimo PED) attualmente è un progetto in pre seed e nasce da una visione chiara: trasformare il consumo quotidiano in un atto consapevole, etico e informato. Spesso, quando ci troviamo davanti agli scaffali di un supermercato, le etichette non bastano a raccontarci la vera storia di ciò che compriamo.</p>
+          <p>Questo progetto vuole essere la risposta a questa mancanza di informazione: un sistema di analisi profonda che valuta i prodotti attraverso pilastri fondamentali come, per esempio, la nutrizione, l'impatto ambientale, i diritti dei lavoratori della filiera, il benessere animale e la presenza di additivi o allergeni, e altro ancora. La valutazione finale è neutrale e vuole essere il più possibile a 360 gradi. Il Passaporto Etico Digitale decodifica la complessità delle informazioni per dare ai consumatori e alle consumatrici gli strumenti per scegliere.</p>
+          <p>Il Passaporto Etico Digitale è progettato per essere uno strumento universale e, seppur nato per valutare l'impatto di ogni singolo prodotto, può essere progettato per valutare anche aziende, organizzazioni, enti pubblici e privati. Perché è un progetto modulare.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. PWA TERRA v2.3 -->
+    <div class="card" id="pwa">
+      <div class="card-header">
+        <span class="card-title">3. L'applicazione: pwa TERRA v2.3</span>
+        <span class="card-sottotitolo">(Strumento)</span>
+      </div>
+      <div class="card-body">
+        <img src="nuovo logo TERRA v2_3 sfondo trasparente.png"
+             alt="Logo pwa TERRA v2.3 – pwa del progetto del Passaporto Etico Digitale (acronimo PED) - copyright di Marzia Neggia"
+             draggable="false"
+             class="card-img">
+        <div class="card-testo">
+          <p>Per portare questa visione direttamente nelle mani dei consumatori e delle consumatrici, si sta sviluppando la PWA (Progressive Web App) TERRA v2.3.</p>
+          <p>Non serve installare nulla dagli store ufficiali: basta un link per avere sullo smartphone questo consulente etico personale.</p>
+          <p>TERRA v2.3 è progettata per essere velocissima e scansionare o analizzare i prodotti, food e non food, in tempo reale, offrendo una valutazione immediata (in decimi e codici colore semplici da leggere) mentre stai facendo la spesa. Tutto questo, grazie all'IA, è sintetizzato per dare risposte chiare a colpo d'occhio, con la possibilità di approfondire ogni singolo dettaglio.</p>
+          <p>La pwa sarà progettata per essere un'app per tutte, tutti e per il pianeta: <strong>inclusiva</strong> nel design per superare disabilità, accessibile anche da device meno recenti, garantisce la massima privacy senza raccogliere dati personali, neutral o negative carbon.</p>
+          <p>Attraverso la pwa TERRA v2.3, il sistema del Passaporto Etico Digitale si potrà tradurre in un'applicazione accessibile a chiunque voglia favorire una transizione concreta verso dinamiche di consumo e produzioni più sostenibili.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. PER I CONSUMATORI -->
+    <div class="card" id="consumatori">
+      <div class="card-header">
+        <span class="card-title">4. Per le consumatrici e i consumatori</span>
+        <span class="card-sottotitolo">(Impatto)</span>
+      </div>
+      <div class="card-body">
+        <div class="card-testo">
+          <p>Ogni scelta di acquisto rappresenta un voto di preferenza verso un determinato modello produttivo e verso il rispetto per questo bellissimo pianeta.<br>Con la pwa TERRA v2.3, chi acquista cessa di essere un consumatore passivo o una consumatrice passiva per diventare protagonista delle proprie scelte e della propria spesa.</p>
+          <p>La trasparenza è un diritto fondamentale, un prodotto alla volta.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. PER INVESTITORI -->
+    <div class="card" id="investitori">
+      <div class="card-header">
+        <span class="card-title">5. Per Business Angel, Investitrici e Investitori, Sostenitrici e Sostenitori</span>
+        <span class="card-sottotitolo">(Opportunità)</span>
+      </div>
+      <div class="card-body">
+        <div class="card-testo">
+          <p>Il Passaporto Etico Digitale e la pwa TERRA v2.3 sono progetti indipendenti con un solido potenziale di crescita e un impatto sociale concreto.</p>
+          <p>Le tecnologie che saranno sviluppate non saranno vincolate alla geolocalizzazione: la pwa può essere progettata per essere utilizzata in qualsiasi parte del mondo, offrendo le medesime funzionalità in Italia come in Nuova Zelanda, per esempio.</p>
+          <p>Sono alla ricerca di business angel, investitrici e investitori, partner lungimiranti e indipendenti, che credano profondamente nell'etica e nella sostenibilità, desiderosi di unire gli obiettivi di sviluppo a un forte valore sociale.</p>
+          <p>La piattaforma non nasce con un intento punitivo o di contrasto verso specifiche realtà, ma con l'obiettivo costruttivo di valorizzare e favorire le produzioni virtuose e i comportamenti etici.</p>
+          <p>È possibile aderire al progetto e sostenerne l'evoluzione tecnologica attraverso investimenti finanziari, partnership strategiche o donazioni libere, per accompagnare la crescita di questa evoluzione etica e sociale.</p>
+          <p>Per ulteriori informazioni e per stabilire un primo contatto, è possibile scrivere a: <a href="mailto:passaportoeticodigitale@proton.me?subject=Informazioni">passaportoeticodigitale@proton.me</a> con oggetto "Informazioni".</p>
+          <p>Si specifica che tutti i contenuti del progetto PED e della pwa TERRA v2.3 <strong>sono tutelati tramite marca temporale digitale</strong>, che certifica la data di creazione e l'anteriorità dei documenti. La marca temporale costituisce prova legale dell'esistenza e della paternità intellettuale del progetto. Inoltre, la documentazione quale il Pitch dei progetti potrà essere messa a disposizione e condivisa in una fase successiva, a seguito dei primi contatti conoscitivi e previa sottoscrizione dell'accordo di riservatezza (NDA).</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. ACCESSIBILITÀ -->
+    <div class="card" id="accessibilita">
+      <div class="card-header">
+        <span class="card-title">6. Nota tecnica sull'accessibilità del sito</span>
+        <span class="card-sottotitolo">(Design)</span>
+      </div>
+      <div class="card-body">
+        <div class="card-testo">
+          <p>Il sito è stato progettato con attenzione all'<strong>accessibilità</strong>, per essere utilizzabile dal maggior numero di persone possibile, indipendentemente dalle capacità visive, motorie o dal dispositivo usato.</p>
+          <p>Il <strong>carattere tipografico</strong> scelto è Atkinson Hyperlegible, sviluppato appositamente per migliorare la leggibilità per chi convive con dislessia o ipovisione. Il font è caricato localmente, senza chiamate esterne a Google Fonts, a tutela della <strong>privacy</strong>.<br>
+          La <strong>palette cromatica</strong> rispetta gli standard internazionali WCAG, il riferimento globale per l'accessibilità visiva.</p>
+          <p>La <strong>navigazione da tastiera</strong> è completamente supportata: un link "Salta al contenuto" permette di saltare il menu e raggiungere subito il testo principale, e tutti i link e i pulsanti mostrano un bordo verde visibile quando sono in focus.</p>
+          <p>Tutte le immagini sono corredate di <strong>testo alternativo</strong>, leggibile dagli screen reader.</p>
+          <p>Il sito è <strong>ottimizzato</strong> per funzionare su dispositivi mobili, tablet e desktop. La struttura della pagina usa elementi HTML semantici — come nav, main, h1, h2 e attributi aria-label — che aiutano gli strumenti assistivi a interpretare correttamente i contenuti.</p>
+          <p>Se si dovessero riscontrare difficoltà nell'accedere ai contenuti, è possibile scrivere a <a href="mailto:passaportoeticodigitale@proton.me?subject=Inclusività%20sito">passaportoeticodigitale@proton.me</a> con oggetto "Inclusività sito": si farà il possibile per trovare una soluzione.</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="accessibilita.js"></script>
+<script src="cookie-banner.js"></script>
+
+<!-- ////////// INIZIO AVVISO SITO IN COSTRUZIONE - eliminare questa riga quando il sito è completo ////////// -->
+<script src="wip-banner.js"></script>
+<!-- ////////// FINE AVVISO SITO IN COSTRUZIONE - eliminare questa riga quando il sito è completo ////////// -->
+
+<script>
+document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+document.addEventListener('dragstart', function(e) { e.preventDefault(); });
+document.addEventListener('keydown', function(e) {
+  if ((e.ctrlKey || e.metaKey) && ['s','p','u','i','j','c'].includes(e.key.toLowerCase())) { e.preventDefault(); }
+  if (e.key === 'F12') { e.preventDefault(); }
+  if (e.ctrlKey && e.shiftKey && ['i','j','c'].includes(e.key.toLowerCase())) { e.preventDefault(); }
+});
+</script>
+
+</body>
+</html>
