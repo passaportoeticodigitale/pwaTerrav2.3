@@ -102,48 +102,99 @@ main {
 h1 {
   font-size: 20px;
   font-weight: 700;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   letter-spacing: 3px;
   line-height: 1.2;
   text-transform: uppercase;
+  text-align: center;
   font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
 }
 
-.contatti-lista {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* LAYOUT DUE COLONNE */
+.contatti-cols {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
-.contatti-lista li {
+.col-left {
+  -webkit-box-flex: 1.4;
+  -ms-flex: 1.4;
+  flex: 1.4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.col-right {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* CARD */
+.card {
+  border: 1.5px solid rgba(45, 65, 33, 0.22);
+  background: rgba(255, 255, 255, 0.45);
+  padding: 26px;
+}
+
+.card-title {
   font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #2d4121;
+  margin-bottom: 12px;
+}
+
+.card-text {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 15px;
   line-height: 1.75;
   color: #1a1a1a;
-  margin-bottom: 30px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid rgba(45, 65, 33, 0.15);
 }
 
-.contatti-lista li:last-child {
-  border-bottom: none;
-}
-
-.contatti-lista strong {
-  color: #2d4121;
-  font-weight: 700;
-}
-
-.contatti-lista a {
+.card-text a {
   color: #2d4121;
   font-weight: 700;
   text-decoration: underline;
 }
 
-.contatti-lista a:hover { opacity: 0.7; }
+.card-text a:hover { opacity: 0.7; }
+
+/* NOTA TEMPI */
+.nota-tempi {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  color: #1a1a1a;
+  text-align: center;
+  margin-top: 40px;
+  letter-spacing: 1px;
+}
 
 /* TABLET */
 @media screen and (max-width: 1024px) {
+  .contatti-cols { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
   header { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
   .nav-links { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
   .nav-links li { margin: 8px 12px; }
@@ -178,32 +229,55 @@ h1 {
   <main>
     <h1>Contatti</h1>
 
-    <ul class="contatti-lista">
+    <div class="contatti-cols">
 
-      <li>
-        <strong>Email:</strong> <a href="mailto:passaportoeticodigitale@proton.me">passaportoeticodigitale@proton.me</a>
-      </li>
+      <!-- COLONNA SINISTRA -->
+      <div class="col-left">
 
-      <li>
-        <strong>Telefono:</strong> Il numero di telefono non è pubblicato per via dell'alto volume di chiamate spam. Sarà condiviso a seguito dei primi contatti via email.
-      </li>
+        <!-- EMAIL -->
+        <div class="card">
+          <div class="card-title">Email</div>
+          <p class="card-text">
+            Il canale principale per qualsiasi comunicazione con il progetto.<br>
+            <a href="mailto:passaportoeticodigitale@proton.me">passaportoeticodigitale@proton.me</a>
+          </p>
+        </div>
 
-      <li>
-        <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/company/112811957" target="_blank" rel="noopener noreferrer">linkedin.com/company/112811957</a>
-      </li>
+        <!-- TELEFONO -->
+        <div class="card">
+          <div class="card-title">Telefono</div>
+          <p class="card-text">Il numero di telefono non è pubblicato per via dell'alto volume di chiamate spam. Sarà condiviso a seguito dei primi contatti via email.</p>
+        </div>
 
-      <li>
-        <strong>Mastodon:</strong> canale in fase di attivazione
-      </li>
+      </div>
 
-      <li>
-        <strong>Tempi di risposta per tutti i canali di contatto:</strong> generalmente di 3-5 giorni lavorativi.
-      </li>
+      <!-- COLONNA DESTRA -->
+      <div class="col-right">
 
-    </ul>
+        <!-- LINKEDIN -->
+        <div class="card">
+          <div class="card-title">LinkedIn</div>
+          <p class="card-text">
+            Segui il progetto su LinkedIn per aggiornamenti, approfondimenti e notizie.<br>
+            <a href="https://www.linkedin.com/company/112811957" target="_blank" rel="noopener noreferrer">linkedin.com/company/112811957</a>
+          </p>
+        </div>
+
+        <!-- MASTODON -->
+        <div class="card">
+          <div class="card-title">Mastodon</div>
+          <p class="card-text">Canale in fase di attivazione.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <p class="nota-tempi">I tempi di risposta per tutti i canali di contatto sono generalmente di 3–5 giorni lavorativi.</p>
+
   </main>
 </div>
-  
+
 <script src="accessibilita.js"></script>
 <script src="cookie-banner.js"></script>
 
