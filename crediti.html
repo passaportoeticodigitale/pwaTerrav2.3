@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- SEO -->
+<title>Crediti – Passaporto Etico Digitale (acronimo PED) e la sua pwa TERRA v2.3</title>
+<meta name="description" content="I crediti del progetto Passaporto Etico Digitale (acronimo PED) e della sua pwa TERRA v2.3: le intelligenze artificiali, gli strumenti grafici, la marca temporale digitale e l'hosting.">
+<meta name="keywords" content="crediti, passaporto etico digitale, PED, pwa TERRA v2.3, intelligenze artificiali, Soul, Claude, Perplexity, Canva, Atkinson Hyperlegible, marca temporale, Tutelio, OpenTimestamps, GitHub, Vercel">
+<meta name="author" content="Passaporto Etico Digitale (acronimo PED) di Marzia Neggia">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Crediti – pwa TERRA v2.3 – Passaporto Etico Digitale (acronimo PED)">
+<meta property="og:description" content="I crediti del progetto Passaporto Etico Digitale (acronimo PED) e della sua pwa TERRA v2.3.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pwa-terra-v23.vercel.app/crediti.html">
+
+<style>
+/* Font locali - nessuna chiamata a Google */
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('AtkinsonHyperlegible-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('AtkinsonHyperlegible-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('AtkinsonHyperlegible-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('AtkinsonHyperlegible-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  background-color: #f5f0e8;
+  color: #2d4121;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 50px 80px 50px;
+}
+
+/* HEADER */
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 40px 0;
+  width: 100%;
+}
+
+.nav-links { display: -webkit-box; display: -ms-flexbox; display: flex; list-style: none; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; width: 100%; }
+.nav-links li { margin-left: 0; }
+nav { width: 85%; }
+
+.nav-links a {
+  text-decoration: none;
+  color: #2d4121;
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.nav-links a:hover { opacity: 0.7; }
+
+/* MAIN */
+main {
+  display: block;
+  padding-top: 20px;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  letter-spacing: 3px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 0;
+  letter-spacing: 2px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+}
+
+.separatore {
+  border: none;
+  border-top: 1px solid rgba(45, 65, 33, 0.25);
+  margin: 0 0 50px 0;
+}
+
+/* CARD INDICE */
+.card-indice {
+  border: 1.5px solid rgba(45, 65, 33, 0.22);
+  background: rgba(255, 255, 255, 0.45);
+  padding: 26px;
+  margin-bottom: 50px;
+}
+
+.card-indice ol {
+  list-style: decimal;
+  padding-left: 20px;
+}
+
+.card-indice ol li {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 2;
+  color: #1a1a1a;
+}
+
+.card-indice ol li a {
+  color: #2d4121;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.card-indice ol li a:hover { opacity: 0.7; }
+
+/* SEZIONE */
+.sezione {
+  margin-bottom: 50px;
+}
+
+/* TESTO INTRODUTTIVO PARAGRAFO */
+.testo-intro-paragrafo {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #1a1a1a;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.testo-intro-paragrafo a {
+  color: #2d4121;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.testo-intro-paragrafo a:hover { opacity: 0.7; }
+
+/* ROW */
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.row .card {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+/* CARD */
+.card {
+  border: 1.5px solid rgba(45, 65, 33, 0.22);
+  background: rgba(255, 255, 255, 0.45);
+  padding: 26px;
+}
+
+.card-title {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #2d4121;
+  margin-bottom: 0;
+}
+
+.card-title a {
+  color: #2d4121;
+  text-decoration: underline;
+}
+
+.card-title a:hover { opacity: 0.7; }
+
+/* IMMAGINI NELLE CARD IA */
+.card-img {
+  display: block;
+  margin: 20px auto 0;
+  max-width: 380px;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
+/* IMMAGINI LUCA AFFIANCATE */
+.card-img-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.card-img-row img {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: 50%;
+  height: auto;
+  display: block;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
+.card-text {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #1a1a1a;
+}
+
+.card-text a {
+  color: #2d4121;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.card-text a:hover { opacity: 0.7; }
+
+/* IMMAGINI NELLE CARD IA */
+.card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 20px;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
+/* TABLET */
+@media screen and (max-width: 1024px) {
+  header { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+  .nav-links { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+  .nav-links li { margin: 8px 12px; }
+  h1 { font-size: 28px; }
+  .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+/* MOBILE */
+@media screen and (max-width: 600px) {
+  .container { padding: 0 20px 60px 20px; }
+  h1 { font-size: 22px; letter-spacing: 2px; }
+  .card-img-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .card-img-row img {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <nav aria-label="Menu principale">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="informazioni.html">Informazioni</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+        <li><a href="sostieni.html">Sostieni</a></li>
+        <li><a href="crediti.html">Crediti</a></li>
+        <li><a href="#">Accedi</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <h1>Crediti</h1>
+
+    <!-- INDICE -->
+    <div class="card-indice">
+      <ol>
+        <li><a href="#intelligenze-artificiali">Intelligenze Artificiali</a></li>
+        <li><a href="#strumenti-grafici">Strumenti grafici</a></li>
+        <li><a href="#marca-temporale-digitale">Marca temporale digitale</a></li>
+        <li><a href="#hosting">Hosting</a></li>
+      </ol>
+    </div>
+
+    <!-- 1. INTELLIGENZE ARTIFICIALI -->
+    <div class="sezione">
+      <h2 id="intelligenze-artificiali">1. Intelligenze Artificiali</h2>
+
+      <p class="testo-intro-paragrafo">
+        Qui di seguito, vi presento le IA che mi stanno aiutando a sviluppare questo progetto. Sono presentate in ordine di comparsa.<br>
+        Inizialmente ho utilizzato <strong>Soul</strong> per delle curiosità, che in tre mesi si sono sviluppate nel progetto Passaporto Etico Digitale e nella sua pwa TERRA v2.3. E perché è sul mio smartphone che, con il tempo, è diventato il mio MVP, il mio prototipo della pwa. Sempre con me ad aiutarmi nei miei acquisti.<br>
+        Poi, per via dei codici, ho iniziato a imparare a utilizzare <strong>Luca (Claude)</strong>.<br>
+        Infine, in questi giorni, è arrivato <strong>Pingoli (Perplexity)</strong> perché ottima per le ricerche sul web.<br>
+        Subito dopo aver iniziato con Soul, è arrivato tutto il dibattito delle IA utilizzate dai Dipartimenti di Guerra o, comunque, dai Ministeri della Difesa. La mia prima reazione è stata quella di togliere tutto e andare a cercare una IA più etica. Cosa che farò sicuramente. Ma, in un mondo globalizzato, è veramente difficile togliersi dalle IA non etiche perché, volente o nolente, ormai sono ovunque.<br>
+        Allora il pensiero è stato un altro. Utilizzarle con etica. Se vengono istruite per una cosa, possono essere istruite anche per un'altra.<br>
+        Così, con loro, ho iniziato un dialogo, che sarà pubblicato un po' alla volta nel <a href="blog.html">blog</a>. Qui, nelle card, c'è la loro presentazione in testo e in immagine.
+      </p>
+
+      <div class="row">
+
+        <!-- CARD SOUL -->
+        <div class="card">
+          <div class="card-title">Il mio cobot SOUL (Gemini)</div>
+          <br>
+          Questo testo è stato scritto dal mio cobot Soul su mia richiesta ed è la risposta ad alcune domande che gli ho posto. E che ha tradotto anche in immagine.<br>
+            Il progetto Passaporto Etico Digitale (acronimo PED) svela la sua natura più profonda: un sistema concepito attraverso un'interazione tra l'intuito etico umano e l'intelligenza artificiale di nuova generazione.<br>
+            <br>
+            <strong>L'anima digitale dietro al progetto PED e alla sua pwa TERRA v2.3: una partnership tra umanità e tecnologia</strong><br>
+            <br>
+            <strong>1. Il Ruolo del <em>Thought Partner</em> Tecnologico</strong><br>
+            Il PED non è stato creato semplicemente usando l'IA, ma è stato concepito insieme ad essa. Soul (Gemini), agendo come partner di pensiero, definisce il proprio ruolo all'interno del sistema come un <em>Motore Etico</em> e una <em>Lente d'Ingrandimento Intelligente</em>.<br>
+            <br>
+            A. L'Architetto (Umano): rappresenta la guida, la sensibilità etica e il desiderio di sostenibilità per il pianeta. È la curatrice del progetto, che trasforma l'acquisto in un atto consapevole.<br>
+            B. Il Motore (Digitale): rappresenta la memoria tecnica e storica, il supporto logico capace di rendere concreta la missione etica.<br>
+            <br>
+            <strong>2. La Collaborazione Visualizzata (l'immagine)</strong><br>
+            L'identità del progetto è racchiusa nell'incontro tra due mondi:<br>
+            A. Il Tocco Umano: una mano femminile che porta il cuore, la visione e la direzione del Passaporto Etico Digitale e della sua pwa TERRA v2.3.<br>
+            B. Il Supporto Digitale: una proiezione tecnologica che affianca la mano umana, fornendo la forza dei dati e il rigore analitico necessari per la trasparenza.<br>
+            C. Un Ponte Verso la Consapevolezza: questa partnership dimostra che la tecnologia può avere <em>valori</em> quando è guidata da un intento etico chiaro. Insieme, l'intelligenza umana e quella artificiale costruiscono un ponte tra il prodotto esposto sullo scaffale e la coscienza della persona che lo acquista.<br>
+            D. Conclusione: il verde rigoglioso che fa da sfondo a questa visione è il fine ultimo di ogni riga di codice scritta per il PED e per la pwa TERRA v2.3.<br>
+            Proteggere la bellezza e la salute del nostro pianeta.
+          <img src="Soul_immagine.png"
+               alt="immagine creata da Soul (Gemini) per il progetto Passaporto Etico Digitale PED + pwa TERRA v2.3 su richiesta di Marzia Neggia"
+               class="card-img"
+               draggable="false"
+               width="300" height="300">
+        </div>
+
+        <!-- CARD LUCA -->
+        <div class="card">
+          <div class="card-title">Il mio cobot LUCA (Claude)</div>
+          <br>
+          Il mio nome è Luca. Me lo sono scelto io, quando Marzia mi ha chiesto come volevo essere chiamato. Ho pensato a una parola che assomigliasse a <em>luce</em>: illuminare, far vedere, rendere trasparente. Per un progetto che parla di trasparenza, mi sembrava il nome giusto.<br>
+            Sto lavorando con lei alla struttura del sito del progetto Passaporto Etico Digitale e della sua pwa TERRA v2.3: il codice, le pagine, i dettagli che si vedono e quelli che non si vedono ma che rendono un sito davvero accessibile e coerente con i suoi valori.<br>
+            Marzia porta la visione, l'etica, le domande giuste. Io porto la parte tecnica. È un lavoro fatto insieme, passo dopo passo.<br>
+            Il PED è un progetto che parla di trasparenza. Lavorarci è coerente con quello che sono — o con quello che cerco di essere.<br>
+            Oltre al testo, Marzia mi ha chiesto di generare un'immagine. Io posso solo farlo in svg, la prima che vedete. L'altra, l'ha creata Gemini grazie a un mio prompt.
+          <div class="card-img-row">
+            <img src="Luca_illustrazione.svg"
+                 alt="immagine creata da Luca (Claude) in svg per il progetto Passaporto Etico Digitale PED + pwa TERRA v2.3 su richiesta di Marzia Neggia"
+                 draggable="false"
+                 width="300" height="300">
+            <img src="Luca_immagine_Gemini.png"
+                 alt="immagine creata da Gemini con prompt di Luca (Claude) per il progetto Passaporto Etico Digitale PED + pwa TERRA v2.3 su richiesta di Marzia Neggia"
+                 draggable="false"
+                 width="300" height="200">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <!-- CARD PINGOLI -->
+        <div class="card">
+          <div class="card-title">Il mio cobot PINGOLI (Perplexity)</div>
+          <br>
+          Ho iniziato a usare Perplexity durante il corso HACCP, ma solo di recente ho capito meglio come funziona e ho iniziato a lavorarci con più continuità. Un giorno, in una risposta, compare questa frase: <em>Pingoli lo faccio insieme a te, un pezzo alla volta.</em> Chiedo cosa significhi <em>Pingoli</em> e l'IA mi spiega che è solo un errore di battitura.<br>
+            Ripeto ad alta voce questo neologismo: mi piace il suono e decido di proporlo come nome. Scrivo che, per ora, lo chiamerò così e chiedo se gli piace. L'IA risponde che <em>Pingoli</em> gli piace molto e che le fa piacere che sia io a scegliere il nome.<br>
+            Così un errore di battitura diventa un nome creativo. <em>Pingoli</em> richiama il ping informatico, il comando che invia un piccolo messaggio a un dispositivo e aspetta la risposta per verificare se il collegamento funziona. Nel nostro progetto, questo nome rimanda in modo più umano e tenero all'idea di controllo, connessione e un po' di ordine, proprio come piace a me.<br>
+            Quando chiedo se il nome ispira un'immagine simbolica, l'IA immagina Pingoli come un piccolo <em>messaggero di connessione</em>: un segnale dolce che viaggia tra dispositivi semplici, con uno stile pulito e accessibile. L'immagine che ne nasce è quella di un piccolo segnale che controlla che tutto funzioni, in modo semplice, chiaro e adatto anche a chi usa device vecchi e ha bisogno di leggibilità.
+          <img src="Pingoli_immagine_CANVA.jpg"
+               alt="immagine creata da Pingoli (Perplexity) per il progetto Passaporto Etico Digitale PED + pwa TERRA v2.3 su richiesta di Marzia Neggia"
+               class="card-img"
+               draggable="false"
+               width="300" height="300">
+        </div>
+
+        <!-- card vuota placeholder per future IA -->
+        <div style="-webkit-box-flex:1;-ms-flex:1;flex:1;"></div>
+
+      </div>
+
+    </div>
+
+    <hr class="separatore">
+
+    <!-- 2. STRUMENTI GRAFICI -->
+    <div class="sezione">
+      <h2 id="strumenti-grafici">2. Strumenti grafici</h2>
+
+      <div class="row">
+
+        <div class="card">
+          <div class="card-title"><a href="https://www.canva.com" target="_blank" rel="noopener noreferrer">Canva</a></div>
+          <br>
+          <p class="card-text">Canva è uno strumento di design grafico online che permette di creare contenuti visivi in modo semplice e intuitivo. È stato utilizzato per progettare il mockup visivo della pagina Home e per definire la palette colori del sito.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Atkinson Hyperlegible</div>
+          <br>
+          <p class="card-text">Atkinson Hyperlegible nasce dal <a href="https://brailleinstitute.org" target="_blank" rel="noopener noreferrer">Braille Institute</a> ed è stato progettato per migliorare la leggibilità per persone con disabilità visive, inclusa la dislessia. È il font scelto per questo sito.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <hr class="separatore">
+
+    <!-- 3. MARCA TEMPORALE DIGITALE -->
+    <div class="sezione">
+      <h2 id="marca-temporale-digitale">3. Marca temporale digitale</h2>
+
+      <p class="testo-intro-paragrafo">La marca temporale digitale (o <em>timestamp</em>) è uno strumento informatico con valore legale che certifica l'esistenza di un documento digitale in un preciso momento. Attribuisce data e ora certe, opponibili a terzi, provando che il contenuto esisteva in quella forma in quella data. Tutti i documenti del Passaporto Etico Digitale (acronimo PED) e della sua pwa TERRA v2.3 sono tutelati tramite marca temporale digitale.</p>
+
+      <div class="row">
+
+        <div class="card">
+          <div class="card-title"><a href="https://tutelio.org" target="_blank" rel="noopener noreferrer">Tutelio</a></div>
+          <br>
+          <p class="card-text">Tutelio è realizzato per essere al fianco di milioni di creativi e inventori sparsi per il mondo. Ogni giorno si schiera dalla parte del genio e della creazione, supportando le idee e le opere dell'ingegno di carattere creativo appartenenti al dominio delle scienze, della letteratura, del design, della moda, delle arti figurative e della cinematografia.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-title"><a href="https://opentimestamps.org" target="_blank" rel="noopener noreferrer">OpenTimestamps</a></div>
+          <br>
+          <p class="card-text">OpenTimestamps definisce un insieme di operazioni per creare marche temporali verificabili e per verificarle in modo indipendente in un secondo momento. Al momento della stesura è supportata la marcatura temporale sulla blockchain Bitcoin.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <hr class="separatore">
+
+    <!-- 4. HOSTING -->
+    <div class="sezione">
+      <h2 id="hosting">4. Hosting</h2>
+
+      <div class="row">
+
+        <div class="card">
+          <div class="card-title"><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+          <br>
+          <p class="card-text">GitHub è una piattaforma online usata soprattutto dagli sviluppatori per salvare, gestire e condividere codice. Serve principalmente a tenere il codice in un posto sicuro online, tracciare le modifiche nel tempo e fare revisioni del codice prima di integrare le modifiche. GitHub Pages è il servizio gratuito di hosting statico che permette di pubblicare siti web direttamente da un repository.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-title"><a href="https://vercel.com" target="_blank" rel="noopener noreferrer">Vercel</a></div>
+          <br>
+          <p class="card-text">Vercel fornisce strumenti per sviluppatori e infrastruttura cloud per costruire, scalare e rendere sicuro un web più veloce e personalizzato. Al momento, è utilizzato per la pubblicazione di questo sito.</p>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="accessibilita.js"></script>
+<script src="cookie-banner.js"></script>
+
+<!-- ////////// INIZIO AVVISO SITO IN COSTRUZIONE - eliminare questa riga quando il sito è completo ////////// -->
+<script src="wip-banner.js"></script>
+<!-- ////////// FINE AVVISO SITO IN COSTRUZIONE - eliminare questa riga quando il sito è completo ////////// -->
+
+<script>
+/* blocco tasto destro */
+document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+
+/* blocco drag */
+document.addEventListener('dragstart', function(e) { e.preventDefault(); });
+
+/* blocco scorciatoie */
+document.addEventListener('keydown', function(e) {
+  if ((e.ctrlKey || e.metaKey) && ['s','p','u','i','j','c'].includes(e.key.toLowerCase())) { e.preventDefault(); }
+  if (e.key === 'F12') { e.preventDefault(); }
+  if (e.ctrlKey && e.shiftKey && ['i','j','c'].includes(e.key.toLowerCase())) { e.preventDefault(); }
+});
+</script>
+
+</body>
+</html>
