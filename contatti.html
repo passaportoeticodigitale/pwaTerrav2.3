@@ -102,7 +102,7 @@ main {
 h1 {
   font-size: 20px;
   font-weight: 700;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   letter-spacing: 3px;
   line-height: 1.2;
   text-transform: uppercase;
@@ -110,43 +110,50 @@ h1 {
   font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
 }
 
-/* LAYOUT DUE COLONNE */
-.contatti-cols {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 40px;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+/* INDICE */
+.card-indice {
+  border: 1.5px solid rgba(45, 65, 33, 0.22);
+  background: rgba(255, 255, 255, 0.45);
+  padding: 26px;
+  margin-bottom: 50px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.col-left {
-  -webkit-box-flex: 1.4;
-  -ms-flex: 1.4;
-  flex: 1.4;
+.card-indice ol {
+  list-style: decimal;
+  padding-left: 20px;
+}
+
+.card-indice ol li {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 2;
+  color: #1a1a1a;
+}
+
+.card-indice ol li a {
+  color: #2d4121;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.card-indice ol li a:hover { opacity: 0.7; }
+
+/* ROW */
+.row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
   gap: 24px;
+  margin-bottom: 24px;
 }
 
-.col-right {
+.row .card {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 24px;
 }
 
 /* CARD */
@@ -163,7 +170,7 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #2d4121;
-  margin-bottom: 12px;
+  margin-bottom: 0;
 }
 
 .card-text {
@@ -181,24 +188,28 @@ h1 {
 
 .card-text a:hover { opacity: 0.7; }
 
-/* NOTA TEMPI */
-.nota-tempi {
-  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
-  font-size: 14px;
-  font-style: italic;
-  color: #1a1a1a;
+/* FOOTER */
+footer {
   text-align: center;
-  margin-top: 40px;
-  letter-spacing: 1px;
+  padding-top: 40px;
+}
+footer p {
+  font-size: 12px;
+  color: rgba(45, 65, 33, 0.6);
 }
 
 /* TABLET */
 @media screen and (max-width: 1024px) {
-  .contatti-cols { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
   header { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
   .nav-links { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
   .nav-links li { margin: 8px 12px; }
   h1 { font-size: 28px; }
+  .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
 }
 
 /* MOBILE */
@@ -229,53 +240,59 @@ h1 {
   <main>
     <h1>Contatti</h1>
 
-    <div class="contatti-cols">
-
-      <!-- COLONNA SINISTRA -->
-      <div class="col-left">
-
-        <!-- EMAIL -->
-        <div class="card">
-          <div class="card-title">Email</div>
-          <p class="card-text">
-            Il canale principale per qualsiasi comunicazione con il progetto.<br>
-            <a href="mailto:passaportoeticodigitale@proton.me">passaportoeticodigitale@proton.me</a>
-          </p>
-        </div>
-
-        <!-- TELEFONO -->
-        <div class="card">
-          <div class="card-title">Telefono</div>
-          <p class="card-text">Il numero di telefono non è pubblicato per via dell'alto volume di chiamate spam. Sarà condiviso a seguito dei primi contatti via email.</p>
-        </div>
-
-      </div>
-
-      <!-- COLONNA DESTRA -->
-      <div class="col-right">
-
-        <!-- LINKEDIN -->
-        <div class="card">
-          <div class="card-title">LinkedIn</div>
-          <p class="card-text">
-            Segui il progetto su LinkedIn per aggiornamenti, approfondimenti e notizie.<br>
-            <a href="https://www.linkedin.com/company/112811957" target="_blank" rel="noopener noreferrer">linkedin.com/company/112811957</a>
-          </p>
-        </div>
-
-        <!-- MASTODON -->
-        <div class="card">
-          <div class="card-title">Mastodon</div>
-          <p class="card-text">Canale in fase di attivazione.</p>
-        </div>
-
-      </div>
-
+    <!-- INDICE -->
+    <div class="card-indice">
+      <ol>
+        <li><a href="#email">Email</a></li>
+        <li><a href="#telefono">Telefono</a></li>
+        <li><a href="#linkedin">LinkedIn</a></li>
+        <li><a href="#mastodon">Mastodon</a></li>
+        <li><a href="#tempi">Tempi di risposta</a></li>
+      </ol>
     </div>
 
-    <p class="nota-tempi">I tempi di risposta per tutti i canali di contatto sono generalmente di 3–5 giorni lavorativi.</p>
+    <!-- RIGA 1: Email + Telefono -->
+    <div class="row">
+      <div class="card" id="email">
+        <div class="card-title">EMAIL</div>
+    
+        <p class="card-text"><a href="mailto:passaportoeticodigitale@proton.me">passaportoeticodigitale@proton.me</a></p>
+      </div>
+      <div class="card" id="telefono">
+        <div class="card-title">TELEFONO</div>
+        
+        <p class="card-text">Il numero di telefono non è pubblicato per via dell'alto volume di chiamate spam. Sarà condiviso a seguito dei primi contatti via email.</p>
+      </div>
+    </div>
+
+    <!-- RIGA 2: LinkedIn + Mastodon -->
+    <div class="row">
+      <div class="card" id="linkedin">
+        <div class="card-title">LINKEDIN</div>
+        
+        <p class="card-text"><a href="https://www.linkedin.com/company/112811957" target="_blank" rel="noopener noreferrer">linkedin.com/company/112811957</a></p>
+      </div>
+      <div class="card" id="mastodon">
+        <div class="card-title">MASTODON</div>
+        
+        <p class="card-text">Canale in fase di attivazione.</p>
+      </div>
+    </div>
+
+    <!-- RIGA 3: Tempi di risposta (card larga) -->
+    <div class="row">
+      <div class="card" id="tempi">
+        <div class="card-title">TEMPI DI RISPOSTA</div>
+        
+        <p class="card-text">I tempi di risposta per tutti i canali di contatto sono generalmente di 3-5 giorni lavorativi.</p>
+      </div>
+    </div>
 
   </main>
+
+  <footer>
+    <p>© 2026 Passaporto Etico Digitale (PED) — Tutti i diritti riservati</p>
+  </footer>
 </div>
 
 <script src="accessibilita.js"></script>
