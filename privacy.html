@@ -119,6 +119,37 @@ h1 {
   text-align: center;
 }
 
+/* CARD INDICE */
+.card-indice {
+  border: 1.5px solid rgba(45, 65, 33, 0.22);
+  background: rgba(255, 255, 255, 0.45);
+  padding: 26px;
+  margin-bottom: 50px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-indice ol {
+  list-style: decimal;
+  padding-left: 20px;
+}
+
+.card-indice ol li {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 2;
+  color: #1a1a1a;
+}
+
+.card-indice ol li a {
+  color: #2d4121;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.card-indice ol li a:hover { opacity: 0.7; }
+
 /* CARD COLONNA UNICA */
 .privacy-lista {
   display: -webkit-box;
@@ -176,27 +207,15 @@ h1 {
   line-height: 1.75;
 }
 
-/* INDICE */
-.indice-list {
-  margin: 0 0 0 20px;
-  padding: 0;
+/* FOOTER */
+footer {
+  text-align: center;
+  padding-top: 40px;
 }
-
-.indice-list li {
-  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
-  font-size: 15px;
-  line-height: 1.75;
-  color: #1a1a1a;
-  margin-bottom: 6px;
+footer p {
+  font-size: 12px;
+  color: rgba(45, 65, 33, 0.6);
 }
-
-.indice-list li a {
-  color: #2d4121;
-  font-weight: 700;
-  text-decoration: underline;
-}
-
-.indice-list li a:hover { opacity: 0.7; }
 
 /* TABLET */
 @media screen and (max-width: 1024px) {
@@ -236,21 +255,20 @@ h1 {
     <h1>Privacy Policy</h1>
     <p class="data-aggiornamento">Informativa redatta ai sensi dell'art. 13 del Regolamento (UE) 2016/679 (GDPR) — Ultimo aggiornamento: 31 maggio 2026</p>
 
-    <div class="privacy-lista">
+    <!-- INDICE -->
+    <div class="card-indice">
+      <ol>
+        <li><a href="#titolare">Titolare del trattamento</a></li>
+        <li><a href="#dati">Dati raccolti e finalità del trattamento</a></li>
+        <li><a href="#cookie">Cookie e tecnologie di tracciamento</a></li>
+        <li><a href="#affiliati">Link affiliati e siti esterni</a></li>
+        <li><a href="#social">Link a piattaforme social</a></li>
+        <li><a href="#diritti">Diritti degli interessati</a></li>
+        <li><a href="#modifiche">Modifiche alla presente informativa</a></li>
+      </ol>
+    </div>
 
-      <!-- INDICE -->
-      <div class="card">
-        <div class="card-title">Indice</div>
-        <ol class="indice-list">
-          <li><a href="#titolare">Titolare del trattamento</a></li>
-          <li><a href="#dati">Dati raccolti e finalità del trattamento</a></li>
-          <li><a href="#cookie">Cookie e tecnologie di tracciamento</a></li>
-          <li><a href="#affiliati">Link affiliati e siti esterni</a></li>
-          <li><a href="#social">Link a piattaforme social</a></li>
-          <li><a href="#diritti">Diritti degli interessati</a></li>
-          <li><a href="#modifiche">Modifiche alla presente informativa</a></li>
-        </ol>
-      </div>
+    <div class="privacy-lista">
 
       <!-- 1. TITOLARE -->
       <div class="card" id="titolare">
@@ -275,8 +293,8 @@ h1 {
             <li><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">Privacy Policy di GitHub</a></li>
             <li><a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy di Vercel</a></li>
           </ul>
-           <p><br>
-          <p><strong>EMAIL</strong><br>
+          <p><br>
+          <strong>EMAIL</strong><br>
           Chi contatta il Titolare tramite i link email presenti nel sito fornisce volontariamente i propri dati personali (quali nome, indirizzo email ed eventuali altri dati contenuti nel messaggio o negli allegati). Tali dati vengono trattati esclusivamente per gestire la comunicazione e rispondere alla richiesta ricevuta.<br>
           Le email di contatto generico sono conservate per il tempo necessario a gestire la comunicazione o comunque per un periodo non superiore a 12 mesi. I documenti ricevuti sono conservati per tutta la durata del rapporto e per il periodo necessario alla tutela dei diritti del Titolare.<br>
           Le email sono conservate nella casella di posta Proton Mail e gli eventuali allegati o documenti ricevuti possono essere archiviati su Proton Drive o Mega.</p>
@@ -308,11 +326,10 @@ h1 {
             <li><a href="https://www.ilgiardinodeilibri.it/policy/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy de Il Giardino dei Libri</a> (i cookies rimangono in memoria per 90 giorni)</li>
           </ul>
           <p><br>
-          <strong>Buy Me a Coffee</strong> è una piattaforma esterna di supporto ai creatori. Nella pagina <a href="sostieni.html">Sostieni</a> trovi il link diretto alla pagina del progetto PED. Per informazioni sul trattamento dei dati da parte di questa piattaforma, si invita a consultare:<br>
-           <ul>
-            <li>
-            <a href="https://buymeacoffee.com/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy di Buy Me a Coffee</a></p>
-           </li>  </ul>     
+          <strong>Buy Me a Coffee</strong> è una piattaforma esterna di supporto ai creatori. Nella pagina <a href="sostieni.html">Sostieni</a> trovi il link diretto alla pagina del progetto PED. Per informazioni sul trattamento dei dati da parte di questa piattaforma, si invita a consultare:</p>
+          <ul>
+            <li><a href="https://buymeacoffee.com/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy di Buy Me a Coffee</a></li>
+          </ul>
         </div>
       </div>
 
@@ -332,16 +349,14 @@ h1 {
       <div class="card" id="diritti">
         <div class="card-title">6. Diritti degli interessati</div>
         <div class="testo">
-          <p>Ai sensi degli artt. 15-22 del Regolamento (UE) 2016/679 (GDPR), ogni utente ha il diritto di:</p>
-          <ul>
-            <li>accedere ai propri dati personali;</li>
-            <li>richiederne la rettifica o la cancellazione;</li>
-            <li>opporsi al trattamento o richiederne la limitazione;</li>
-            <li>richiedere la portabilità dei dati;</li>
-            <li>revocare il consenso in qualsiasi momento, ove il trattamento sia basato su di esso.</li>
-          </ul>
-          <p>Per esercitare tali diritti è possibile scrivere al Titolare del trattamento all'indirizzo: <a href="mailto:passaportoeticodigitale@proton.me?subject=Privacy">passaportoeticodigitale@proton.me</a> con oggetto "Privacy".<br>
-          È inoltre possibile proporre reclamo al <strong>Garante per la protezione dei dati personali</strong> (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer">www.garanteprivacy.it</a>), Piazza Venezia 11, 00187 Roma.</p>
+          <p>Ai sensi degli artt. 15-22 del Regolamento (UE) 2016/679 (GDPR), ogni utente ha il diritto di:<br>
+          - accedere ai propri dati personali;<br>
+          - richiederne la rettifica o la cancellazione;<br>
+          - opporsi al trattamento o richiederne la limitazione;<br>
+          - richiedere la portabilità dei dati;<br>
+          - revocare il consenso in qualsiasi momento, ove il trattamento sia basato su di esso.</p>
+          Per esercitare tali diritti è possibile scrivere al Titolare del trattamento all'indirizzo: <a href="mailto:passaportoeticodigitale@proton.me?subject=Privacy">passaportoeticodigitale@proton.me</a> con oggetto "Privacy".
+          <p><br>È inoltre possibile proporre reclamo al <strong>Garante per la protezione dei dati personali</strong> (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer">www.garanteprivacy.it</a>), Piazza Venezia 11, 00187 Roma.</p>
         </div>
       </div>
 
@@ -358,6 +373,10 @@ h1 {
     </div>
 
   </main>
+
+  <footer>
+    <p>© 2026 Passaporto Etico Digitale (PED) — Tutti i diritti riservati</p>
+  </footer>
 </div>
 
 <script src="accessibilita.js"></script>
