@@ -281,51 +281,8 @@ footer p {
   color: rgba(45, 65, 33, 0.6);
 }
 
-/* QUI HO AGGIUNTO LA FRECCIA "TORNA SU" */
-.back-to-top {
-  position: fixed;
-  right: 25px;  /* sposta la freccia verso sinistra, per allinearla al cookie */
-  bottom: 70px; /* mantiene l'altezza che ora ti piace */
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #ffffff;
-  color: #2d4121;
-  border: 1px solid #2d4121;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 1;
-  z-index: 999;
-  box-sizing: border-box;
-}
-    .back-to-top:hover,
-    .back-to-top:focus {
-      background: #2d4121;
-      color: #ffffff;
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(45, 65, 33, 0.25);
-    }
 
-    @media (max-width: 600px) {
-      .back-to-top {
-        width: 32px;
-        height: 32px;
-        right: 10px;
-        bottom: 10px;
-        font-size: 16px;
-      }
-    }
 
-    @media (prefers-reduced-motion: no-preference) {
-      html {
-        scroll-behavior: smooth;
-      }
-    }
-    /* FINE FRECCIA "TORNA SU" */
-    
 </style>
 </head>
 <body>
@@ -376,12 +333,6 @@ footer p {
 </footer>
 
 </div>
-
-<!-- QUI HO AGGIUNTO L'ELEMENTO DELLA FRECCIA "TORNA SU" -->
-  <a href="#skip-menu" class="back-to-top" aria-label="Torna all'inizio della pagina">
-    ↑
-  </a>
-  <!-- FINE FRECCIA "TORNA SU" -->
 
 <script src="accessibilita.js"></script>
 <script src="cookie-banner.js"></script>
