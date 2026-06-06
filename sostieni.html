@@ -7,7 +7,7 @@
 
 <!-- SEO -->
 <title>Sostieni il Progetto – Passaporto Etico Digitale (acronimo PED) e la sua pwa TERRA v2.3</title>
-<meta name="description" content="Sostieni il Passaporto Etico Digitale (acronimo PED) e la pwa TERRA v2.3 attraverso link affiliati, donazioni o collaborazioni etiche e sostenibili. No greenwashing">
+<meta name="description" content="Sostieni il Passaporto Etico Digitale (acronimo PED) e la pwa TERRA v2.3 attraverso link affiliati, donazioni o collaborazioni etiche.">
 <meta name="keywords" content="sostieni, passaporto etico digitale, PED, pwa TERRA v2.3, affiliazioni, donazioni, collaborazioni, sostenibilità, consumo etico">
 <meta name="author" content="Passaporto Etico Digitale (acronimo PED) di Marzia Neggia">
 <meta name="robots" content="index, follow">
@@ -275,6 +275,47 @@ h1 {
   color: rgba(45, 65, 33, 0.6);
 }
 
+/* CARD INDICE */
+.card-indice {
+  border: 1.5px solid rgba(45, 65, 33, 0.22);
+  background: rgba(255, 255, 255, 0.45);
+  padding: 26px;
+  margin-bottom: 30px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-indice ol {
+  list-style: decimal;
+  padding-left: 20px;
+}
+
+.card-indice ol li {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 2;
+  color: #1a1a1a;
+}
+
+.card-indice ol li a {
+  color: #2d4121;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.card-indice ol li a:hover { opacity: 0.7; }
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding-top: 40px;
+}
+footer p {
+  font-size: 12px;
+  color: rgba(45, 65, 33, 0.6);
+}
+
 /* TABLET */
 @media screen and (max-width: 1024px) {
   .sostieni-cols { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
@@ -313,9 +354,20 @@ h1 {
   <main>
     <h1>Sostieni il Progetto</h1>
 
+    <!-- INDICE -->
+    <div class="card-indice">
+      <ol>
+        <li><a href="#buy-me-a-coffee">Buy Me a Coffee</a></li>
+        <li><a href="#giardino-dei-libri">Il Giardino dei Libri</a></li>
+        <li><a href="#macrolibrarsi">Macrolibrarsi</a></li>
+        <li><a href="#collaborazioni">Collaborazioni e Sponsorizzazioni</a></li>
+        <li><a href="#investitori">Business Angels, Investitrici e Investitori, Sostenitrici e Sostenitori</a></li>
+      </ol>
+    </div>
+
     <p class="intro">Il PASSAPORTO ETICO DIGITALE (acronimo PED) e la sua pwa TERRA v2.3 è un progetto indipendente in pre-seed, costruito, al momento, senza finanziamenti esterni ma solo attraverso la passione della sua creatrice Marzia. Puoi sostenerla concretamente acquistando libri e altri prodotti attraverso i link affiliati qui sotto: per te non cambia nulla sul prezzo, ma una piccola percentuale sostiene il progetto e la sua creatrice.</p>
 
-    <p class="why"><strong>Perché questi partner?</strong> Perché sono realtà indipendenti, coerenti con i valori del progetto: trasparenza, sostenibilità e cultura del consumo etico.</p>
+    <p class="why">Perché questi partner? Sono realtà indipendenti, coerenti con i valori del progetto: trasparenza, sostenibilità e cultura del consumo etico.</p>
 
     <div class="sostieni-cols">
 
@@ -323,22 +375,22 @@ h1 {
       <div class="col-left">
 
         <!-- BUY ME A COFFEE -->
-        <div class="card">
-          <div class="card-title">Buy Me a Coffee</div>
-          <p class="card-text">Sostieni direttamente il progetto con una donazione libera tramite la piattaforma Buy Me a Coffee. La pagina dedicata al Passaporto Etico Digitale sarà presto disponibile.</p>
-          <button class="btn disabled" disabled aria-disabled="true">Presto disponibile</button>
+        <div class="card" id="buy-me-a-coffee">
+          <div class="card-title">1. Buy Me a Coffee</div>
+          <p class="card-text">Sostieni direttamente il progetto con una donazione libera tramite la piattaforma Buy Me a Coffee.</p>
+          <a href="https://www.buymeacoffee.com/passaportoeticodigitale" target="_blank" rel="noopener noreferrer" class="btn">Visita Buy Me a Coffee →</a>
         </div>
 
         <!-- IL GIARDINO DEI LIBRI -->
-        <div class="card">
-          <div class="card-title">Il Giardino dei Libri</div>
+        <div class="card" id="giardino-dei-libri">
+          <div class="card-title">2. Il Giardino dei Libri</div>
           <p class="card-text">Libreria online specializzata in Anima, Corpo, Mente e Spirito, con oltre 70.000 libri, CD, DVD e molto altro. Nata nel 1993, è una delle più grandi librerie online italiane, specializzata nella promozione della salute naturale, la crescita personale e la conoscenza di sé.</p>
           <a href="https://www.ilgiardinodeilibri.it/?pn=274" target="_blank" rel="noopener noreferrer" class="btn">Visita Il Giardino dei Libri →</a>
         </div>
 
         <!-- MACROLIBRARSI -->
-        <div class="card">
-          <div class="card-title">Macrolibrarsi</div>
+        <div class="card" id="macrolibrarsi">
+          <div class="card-title">3. Macrolibrarsi</div>
           <p class="card-text">E-commerce etico fondato nel 2000, con oltre 80.000 prodotti naturali e biologici dedicati al benessere del corpo, della mente e dello spirito. Società Benefit, aderisce alla <a href="https://www.economia-del-bene-comune.it/" target="_blank" rel="noopener noreferrer">Federazione dell'Economia del Bene Comune</a> e promuove piccoli produttori e aziende italiane.</p>
           <a href="https://www.macrolibrarsi.it/?pn=378" target="_blank" rel="noopener noreferrer" class="btn">Visita Macrolibrarsi →</a>
         </div>
@@ -349,24 +401,29 @@ h1 {
       <div class="col-right">
 
         <!-- COLLABORAZIONI -->
-        <div class="card-side">
-          <div class="card-side-title">Collaborazioni e Sponsorizzazioni</div>
+        <div class="card-side" id="collaborazioni">
+          <div class="card-side-title">4. Collaborazioni e Sponsorizzazioni</div>
           <p class="card-side-text">Sei un'azienda, un editore o un progetto con valori etici e di sostenibilità? No greenwashing.<br>Scrivi per esplorare forme di collaborazione o sponsorizzazione etica.</p>
           <a href="mailto:passaportoeticodigitale@proton.me?subject=Collaborazione%20e%20Sponsor" class="card-email">passaportoeticodigitale@proton.me</a>
           <span class="card-oggetto">Oggetto: "Collaborazione e Sponsor"</span>
         </div>
 
         <!-- INVESTITORI -->
-        <div class="card-side investitori">
-          <div class="card-side-title">Investitori, Business Angels e Sostenitori</div>
-          <p class="card-side-text">Il Passaporto Etico Digitale e la pwa TERRA v2.3 sono progetti indipendenti con un solido potenziale di crescita e un impatto sociale concreto.<br>Business angel, investitori e partner lungimiranti, che credano profondamente nell'etica e nella sostenibilità, sono i benvenuti.</p>
-          <a href="informazioni.html#investitori" class="btn">Leggi di più →</a>        
-       </div>
+        <div class="card-side investitori" id="investitori">
+          <div class="card-side-title">5. Business Angels, Investitrici e Investitori, Sostenitrici e Sostenitori</div>
+          <p class="card-side-text">Il Passaporto Etico Digitale e la pwa TERRA v2.3 sono progetti indipendenti con un solido potenziale di crescita e un impatto sociale concreto.<br>Business angel, investitori e partner lungimiranti che credano profondamente nell'etica e nella sostenibilità sono i benvenuti.</p>
+          <a href="mailto:passaportoeticodigitale@proton.me?subject=Informazioni" class="card-email">passaportoeticodigitale@proton.me</a>
+          <span class="card-oggetto">Oggetto: "Informazioni"</span>
+        </div>
 
       </div>
 
     </div>
   </main>
+
+  <footer>
+    <p>© 2026 Passaporto Etico Digitale (PED) — Tutti i diritti riservati</p>
+  </footer>
 </div>
 
 <script src="accessibilita.js"></script>
