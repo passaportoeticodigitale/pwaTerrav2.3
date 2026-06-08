@@ -6,17 +6,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <!-- SEO -->
-<title>Contatti – Passaporto Etico Digitale (acronimo PED) e la sua pwa TERRA v2.3</title>
-<meta name="description" content="Contatta il progetto Passaporto Etico Digitale (acronimo PED) e la pwa TERRA v2.3 via email, LinkedIn o Mastodon. Rispondiamo entro 3-5 giorni lavorativi.">
-<meta name="keywords" content="contatti, passaporto etico digitale, PED, pwa TERRA v2.3, email, linkedin, mastodon">
+<title>Blog – Passaporto Etico Digitale (acronimo PED) e la sua pwa TERRA v2.3</title>
+<meta name="description" content="Segui il blog del progetto Passaporto Etico Digitale (acronimo PED) e della pwa TERRA v2.3 su LinkedIn e Mastodon.">
+<meta name="keywords" content="blog, passaporto etico digitale, PED, pwa TERRA v2.3, linkedin, mastodon">
 <meta name="author" content="Passaporto Etico Digitale (acronimo PED) di Marzia Neggia">
 <meta name="robots" content="index, follow">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Contatti – pwa TERRA v2.3 – Passaporto Etico Digitale (acronimo PED)">
-<meta property="og:description" content="Contatta il progetto Passaporto Etico Digitale (acronimo PED) e la pwa TERRA v2.3 via email, LinkedIn o Mastodon.">
+<meta property="og:title" content="Blog – pwa TERRA v2.3 – Passaporto Etico Digitale (acronimo PED)">
+<meta property="og:description" content="Segui il blog del progetto Passaporto Etico Digitale (acronimo PED) e della pwa TERRA v2.3 su LinkedIn e Mastodon.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://pwa-terra-v23.vercel.app/contatti.html">
+<meta property="og:url" content="https://pwa-terra-v23.vercel.app/blog.html">
 
 <style>
 /* Font locali - nessuna chiamata a Google */
@@ -178,15 +178,31 @@ h1 {
   font-size: 15px;
   line-height: 1.75;
   color: #1a1a1a;
+  margin-bottom: 18px;
 }
 
-.card-text a {
-  color: #2d4121;
+/* BOTTONE */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  text-decoration: none;
   font-weight: 700;
-  text-decoration: underline;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid #639922;
+  background-color: #639922;
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  white-space: nowrap;
+  -webkit-appearance: none;
+  appearance: none;
 }
-
-.card-text a:hover { opacity: 0.7; }
+.btn:hover { opacity: 0.72; }
 
 /* FOOTER */
 footer {
@@ -216,6 +232,7 @@ footer p {
 @media screen and (max-width: 600px) {
   .container { padding: 0 20px 60px 20px; }
   h1 { font-size: 22px; letter-spacing: 2px; }
+  .btn { width: 100%; text-align: center; }
 }
 </style>
 </head>
@@ -227,7 +244,7 @@ footer p {
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="informazioni.html">Informazioni</a></li>
-         <li><a href="blog.html">Blog</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="contatti.html">Contatti</a></li>
         <li><a href="sostieni.html">Sostieni</a></li>
         <li><a href="crediti.html">Crediti</a></li>
@@ -238,54 +255,37 @@ footer p {
   </header>
 
   <main>
-    <h1>Contatti</h1>
+    <h1>Blog</h1>
 
     <!-- INDICE -->
     <div class="card-indice">
       <ol>
-        <li><a href="#email">Email</a></li>
-        <li><a href="#telefono">Telefono</a></li>
         <li><a href="#linkedin">LinkedIn</a></li>
         <li><a href="#mastodon">Mastodon</a></li>
-        <li><a href="#tempi">Tempi di risposta</a></li>
       </ol>
     </div>
 
-    <!-- RIGA 1: Email + Telefono -->
+    <!-- RIGA: LinkedIn + Mastodon -->
     <div class="row">
-      <div class="card" id="email">
-        <div class="card-title">EMAIL</div>
-    
-        <p class="card-text"><a href="mailto:passaportoeticodigitale@proton.me">passaportoeticodigitale@proton.me</a></p>
-      </div>
-      <div class="card" id="telefono">
-        <div class="card-title">TELEFONO</div>
-        
-        <p class="card-text">Il numero di telefono non è pubblicato per via dell'alto volume di chiamate spam. Sarà condiviso a seguito dei primi contatti via email.</p>
-      </div>
-    </div>
 
-    <!-- RIGA 2: LinkedIn + Mastodon -->
-    <div class="row">
       <div class="card" id="linkedin">
-        <div class="card-title">LINKEDIN</div>
-        
-        <p class="card-text"><a href="https://www.linkedin.com/company/112811957" target="_blank" rel="noopener noreferrer">linkedin.com/company/112811957</a></p>
+        <div class="card-title">LinkedIn</div>
+  
+        <p class="card-text">LinkedIn è una piattaforma professionale dove si condividono contenuti, si costruiscono contatti e si cura la propria immagine lavorativa.
+          <br>LinkedIn richiede l'account per vedere la pagina del progetto.</p>
+        <a href="https://www.linkedin.com/company/112811957" target="_blank" rel="noopener noreferrer" class="btn">Visita LinkedIn →</a>
       </div>
-      <div class="card" id="mastodon">
-        <div class="card-title">MASTODON</div>
-        
-        <p class="card-text">Canale in fase di attivazione.</p>
-      </div>
-    </div>
 
-    <!-- RIGA 3: Tempi di risposta (card larga) -->
-    <div class="row">
-      <div class="card" id="tempi">
-        <div class="card-title">TEMPI DI RISPOSTA</div>
+      <div class="card" id="mastodon">
+        <div class="card-title">Mastodon</div>
         
-        <p class="card-text">I tempi di risposta per tutti i canali di contatto sono generalmente di 3-5 giorni lavorativi.</p>
+        <p class="card-text">Mastodon è un social
+open source
+e decentralizzato, pensato per dare più controllo agli utenti e meno potere a una singola azienda. Funziona in modo più <em>democratico</em> perché è formato da comunità e server indipendenti, spesso senza pubblicità e con una forte attenzione a privacy, etica e sostenibilità digitale.
+          <br>Per visitare la pagina del progetto non è necessario avere un account. Lo è, se richiedete di seguirla.</p>
+        <a href="https://mastodon.uno/@passaportoeticodigitale" target="_blank" rel="noopener noreferrer" class="btn">Visita Mastodon →</a>
       </div>
+
     </div>
 
   </main>
