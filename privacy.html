@@ -181,7 +181,7 @@ h1 {
 .testo {
   font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
   font-size: 15px;
-  line-height: 1.75;
+  line-height: 1.5;
   color: #1a1a1a;
 }
 
@@ -204,7 +204,7 @@ h1 {
 
 .testo ul li {
   margin-bottom: 8px;
-  line-height: 1.75;
+  line-height: 1.5;
 }
 
 /* FOOTER */
@@ -253,7 +253,7 @@ footer p {
   <main>
 
     <h1>Privacy Policy</h1>
-    <p class="data-aggiornamento">Informativa redatta ai sensi dell'art. 13 del Regolamento (UE) 2016/679 (GDPR) <br> Ultimo aggiornamento: 31 maggio 2026</p>
+    <p class="data-aggiornamento">Informativa redatta ai sensi dell'art. 13 del Regolamento (UE) 2016/679 (GDPR) <br> Ultimo aggiornamento: 11 luglio 2026</p>
 
     <!-- INDICE -->
     <div class="card-indice">
@@ -263,6 +263,7 @@ footer p {
         <li><a href="#cookie">Cookie e tecnologie di tracciamento</a></li>
         <li><a href="#affiliati">Link affiliati e siti esterni</a></li>
         <li><a href="#social">Link a piattaforme social</a></li>
+        <li><a href="#gestione-dati-pwa">Gestione dei dati nella pwa TERRA v2.3</a></li>
         <li><a href="#diritti">Diritti degli interessati</a></li>
         <li><a href="#modifiche">Modifiche alla presente informativa</a></li>
       </ol>
@@ -345,9 +346,40 @@ footer p {
         </div>
       </div>
 
-      <!-- 6. DIRITTI DEGLI INTERESSATI -->
+     <!-- 6. GESTIONE DEI DATI NELLA PWA -->
+      <div class="card" id="gestione-dati-pwa">
+        <div class="card-title">6. Gestione dei dati nella pwa TERRA v2.3</div>
+        <div class="testo">
+          TERRA v2.3 è la Progressive Web App (PWA) del progetto Passaporto Etico Digitale (PED), disponibile all'indirizzo <a href="https://pwaterrav23.vercel.app/" target="_blank" rel="noopener noreferrer">pwaterrav23.vercel.app</a>.<br>
+          Per garantire il suo corretto funzionamento, la PWA può memorizzare sul dispositivo dell'utente, tramite una tecnologia di archiviazione locale del browser (IndexedDB), dati relativi ai prodotti scansionati, non riconducibili all'identità dell'utente.<br>
+          <br>
+          <strong>NESSUN DATO PERSONALE RACCOLTO</strong><br>
+          Per usare la PWA non è richiesta registrazione: non vengono chiesti né nome, email, numero di telefono o altri dati personali, e non viene creato nessun profilo.<br>
+          <br>
+          <strong>NESSUNA GEOLOCALIZZAZIONE</strong><br>
+          La PWA non chiede né utilizza, in nessun momento, la posizione del dispositivo.<br>
+          <br>
+          <strong>FONTI DEI DATI DI VALUTAZIONE PRODOTTO</strong><br>
+          Per valutare i prodotti, la PWA consulta database pubblici e/o privati esterni. Sono unicamente informazioni sui prodotti scansionati, non dati raccolti sull'utente.<br>
+          <br>
+          <strong>CACHE LOCALE DEI DATI PRODOTTO</strong><br>
+          Per un utilizzo più rapido della PWA, e in caso di assenza di connessione internet, la PWA salva sul dispositivo dell'utente, tramite IndexedDB, i dati dei prodotti che l'utente ha scansionato. Si tratta di dati testuali, di dimensioni ridotte, che occupano uno spazio minimo sul dispositivo.<br>
+          Periodicamente (indicativamente una volta al mese), la PWA verifica se i dati salvati sui prodotti già scansionati sono stati aggiornati (ad esempio in caso di variazione degli ingredienti o di una nuova certificazione). Questo controllo avviene richiedendo unicamente i codici a barre dei prodotti già presenti nella cache locale, senza inviare né collegare in alcun modo alcuna informazione che possa identificare l'utente o il dispositivo.<br>
+          Il controllo dei dati prodotto non ha quindi bisogno di alcun identificativo dell'utente per funzionare: è sufficiente sapere quali prodotti verificare, non chi sta effettuando la richiesta. In questo modo non sarà possibile costruire uno storico delle richieste collegato a un dispositivo specifico, garantendo che il processo resti anonimo.<br>
+          <strong>Attenzione</strong>: se si cancella la cache o i dati di navigazione del browser, questi dati vengono cancellati in modo definitivo. Non esistendo un server che li conservi, una volta persi non possono essere recuperati.<br>
+          <br>
+          <strong>SUGGERIMENTO TECNICO SUL BROWSER</strong><br>
+          Come spiegato in precedenza, i dati sui prodotti si trovano solo nel browser: se si cancella la cache, si perdono. Per evitarlo, alcuni browser (ad esempio Firefox) permettono di aggiungere il sito alle eccezioni dalla cancellazione automatica dei dati. È consigliato verificare questa opzione nelle impostazioni del proprio browser, se si desidera conservare nel tempo i dati dei prodotti scansionati.<br>
+          <br>
+          <strong>FOTOCAMERA</strong><br>
+          La fotocamera del dispositivo si attiva solo quando l'utente dà esplicitamente l'autorizzazione. Non si attiva mai automaticamente all'apertura della PWA. Serve unicamente a scansionare il codice a barre, l'etichetta del prodotto e/o il QR code.<br>
+          Nessuna immagine o video viene salvato sul dispositivo o inviato a server esterni.
+        </div>
+      </div>
+      
+      <!-- 7. DIRITTI DEGLI INTERESSATI -->
       <div class="card" id="diritti">
-        <div class="card-title">6. Diritti degli interessati</div>
+        <div class="card-title">7. Diritti degli interessati</div>
         <div class="testo">
           <p>Ai sensi degli artt. 15-22 del Regolamento (UE) 2016/679 (GDPR), ogni utente ha il diritto di:<br>
           - accedere ai propri dati personali;<br>
@@ -360,13 +392,13 @@ footer p {
         </div>
       </div>
 
-      <!-- 7. MODIFICHE -->
+      <!-- 8. MODIFICHE -->
       <div class="card" id="modifiche">
-        <div class="card-title">7. Modifiche alla presente informativa</div>
+        <div class="card-title">8. Modifiche alla presente informativa</div>
         <div class="testo">
           <p>Il Titolare si riserva il diritto di aggiornare la presente Privacy Policy in qualsiasi momento, in particolare in seguito all'evoluzione del sito e dei servizi offerti (ad esempio in caso di attivazione di link affiliati con nuove condizioni, nuovi partner o nuove funzionalità).<br>
           Si consiglia di consultare periodicamente questa pagina per verificare eventuali aggiornamenti.<br>
-          Ultimo aggiornamento: 31 maggio 2026</p>
+          Ultimo aggiornamento: 11 luglio 2026</p>
         </div>
       </div>
 
