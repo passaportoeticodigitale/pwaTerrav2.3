@@ -253,7 +253,7 @@ footer p {
   <main>
 
     <h1>Privacy Policy</h1>
-    <p class="data-aggiornamento">Informativa redatta ai sensi dell'art. 13 del Regolamento (UE) 2016/679 (GDPR) <br> Ultimo aggiornamento: 11 luglio 2026</p>
+    <p class="data-aggiornamento">Informativa redatta ai sensi dell'art. 13 del Regolamento (UE) 2016/679 (GDPR) <br> Ultimo aggiornamento: 19 luglio 2026</p>
 
     <!-- INDICE -->
     <div class="card-indice">
@@ -354,26 +354,33 @@ footer p {
           Per garantire il suo corretto funzionamento, la PWA può memorizzare sul dispositivo dell'utente, tramite una tecnologia di archiviazione locale del browser (IndexedDB), dati relativi ai prodotti scansionati, non riconducibili all'identità dell'utente.<br>
           <br>
           <strong>NESSUN DATO PERSONALE RACCOLTO</strong><br>
-          Per usare la PWA non è richiesta registrazione: non vengono chiesti né nome, email, numero di telefono o altri dati personali, e non viene creato nessun profilo.<br>
+          Per usare la PWA non è richiesta alcuna registrazione e non viene creato nessun profilo. Per questo motivo non vengono chiesti né nome, email, numero di telefono o altri dati personali.<br>
           <br>
           <strong>NESSUNA GEOLOCALIZZAZIONE</strong><br>
-          La PWA non chiede né utilizza, in nessun momento, la posizione del dispositivo.<br>
+          La PWA non chiede e non utilizza, in nessun momento, la posizione del dispositivo.<br>
           <br>
           <strong>FONTI DEI DATI DI VALUTAZIONE PRODOTTO</strong><br>
           Per valutare i prodotti, la PWA consulta database pubblici e/o privati esterni. Sono unicamente informazioni sui prodotti scansionati, non dati raccolti sull'utente.<br>
           <br>
           <strong>CACHE LOCALE DEI DATI PRODOTTO</strong><br>
           Per un utilizzo più rapido della PWA, e in caso di assenza di connessione internet, la PWA salva sul dispositivo dell'utente, tramite IndexedDB, i dati dei prodotti che l'utente ha scansionato. Si tratta di dati testuali, di dimensioni ridotte, che occupano uno spazio minimo sul dispositivo.<br>
-          Periodicamente (indicativamente una volta al mese), la PWA verifica se i dati salvati sui prodotti già scansionati sono stati aggiornati (ad esempio in caso di variazione degli ingredienti o di una nuova certificazione). Questo controllo avviene richiedendo unicamente i codici a barre dei prodotti già presenti nella cache locale, senza inviare né collegare in alcun modo alcuna informazione che possa identificare l'utente o il dispositivo.<br>
+          Periodicamente (indicativamente una volta al mese), la PWA verifica se i dati salvati sui prodotti già scansionati sono stati aggiornati (ad esempio in caso di variazione degli ingredienti o di una nuova certificazione). Questo controllo avviene utilizzando unicamente i codici a barre dei prodotti già presenti nella cache locale, senza inviare né collegare, in alcun modo, alcuna informazione che possa identificare l'utente o il dispositivo.<br>
           Il controllo dei dati prodotto non ha quindi bisogno di alcun identificativo dell'utente per funzionare: è sufficiente sapere quali prodotti verificare, non chi sta effettuando la richiesta. In questo modo non sarà possibile costruire uno storico delle richieste collegato a un dispositivo specifico, garantendo che il processo resti anonimo.<br>
           <strong>Attenzione</strong>: se si cancella la cache o i dati di navigazione del browser, questi dati vengono cancellati in modo definitivo. Non esistendo un server che li conservi, una volta persi non possono essere recuperati.<br>
           <br>
           <strong>SUGGERIMENTO TECNICO SUL BROWSER</strong><br>
-          Come spiegato in precedenza, i dati sui prodotti si trovano solo nel browser: se si cancella la cache, si perdono. Per evitarlo, alcuni browser (ad esempio Firefox) permettono di aggiungere il sito alle eccezioni dalla cancellazione automatica dei dati. È consigliato verificare questa opzione nelle impostazioni del proprio browser, se si desidera conservare nel tempo i dati dei prodotti scansionati.<br>
+          Come spiegato in precedenza, i dati sui prodotti si trovano solo nel browser: se si cancella la cache, si perdono. Per evitarlo, alcuni browser permettono di aggiungere il sito alle eccezioni dalla cancellazione automatica dei dati. È consigliato verificare questa opzione nelle impostazioni del proprio browser, se si desidera conservare nel tempo i dati dei prodotti scansionati.<br>
           <br>
-          <strong>FOTOCAMERA</strong><br>
+          <strong>ULTERIORE PRECISAZIONE TECNICA (HOSTING)</strong><br>
+Va inoltre precisato che, per poter caricare le pagine della PWA, il fornitore di hosting (Vercel) riceve automaticamente l'indirizzo IP di chi vi accede — è una caratteristica tecnica standard di qualsiasi sito o app web, necessaria al solo funzionamento della connessione. Questo trattamento è già descritto al <a href="#dati">punto 2 (Dati raccolti e finalità del trattamento)</a>, a cui si rimanda per maggiori informazioni.
+   <br><br>      
+<strong>FOTOCAMERA</strong><br>
           La fotocamera del dispositivo si attiva solo quando l'utente dà esplicitamente l'autorizzazione. Non si attiva mai automaticamente all'apertura della PWA. Serve unicamente a scansionare il codice a barre, l'etichetta del prodotto e/o il QR code.<br>
           Nessuna immagine o video viene salvato sul dispositivo o inviato a server esterni.
+ <br><br>
+          <strong>SEGNALAZIONI E CONTATTI</strong><br>
+TERRA v2.3 è progettata per non raccogliere dati personali, non geolocalizzare e non tracciare l'utente, come descritto nei punti precedenti. Per quanto riguarda i dati tecnici raccolti automaticamente dal fornitore di hosting (ad esempio l'indirizzo IP), si rimanda a quanto già descritto al <a href="#dati">punto 2 ("Dati raccolti e finalità del trattamento")</a>.<br>
+Se, durante l'utilizzo della PWA (attualmente in fase di test), si riscontrasse un malfunzionamento, un comportamento anomalo, o si ritenesse che i principi sopra descritti non siano rispettati, si invita a scrivere a <a href="mailto:passaportoeticodigitale@proton.me">passaportoeticodigitale@proton.me</a>, con oggetto "Servizio Utente".
         </div>
       </div>
       
@@ -398,7 +405,7 @@ footer p {
         <div class="testo">
           <p>Il Titolare si riserva il diritto di aggiornare la presente Privacy Policy in qualsiasi momento, in particolare in seguito all'evoluzione del sito e dei servizi offerti (ad esempio in caso di attivazione di link affiliati con nuove condizioni, nuovi partner o nuove funzionalità).<br>
           Si consiglia di consultare periodicamente questa pagina per verificare eventuali aggiornamenti.<br>
-          Ultimo aggiornamento: 11 luglio 2026</p>
+          Ultimo aggiornamento: 19 luglio 2026</p>
         </div>
       </div>
 
