@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- SEO -->
+<title>Come installare la pwa TERRA v2.3 – Passaporto Etico Digitale (acronimo PED)</title>
+<meta name="description" content="Guida all'installazione manuale della pwa TERRA v2.3 su Android, dispositivi Samsung e iPhone/iPad, con indicazioni per browser testati e non compatibili.">
+<meta name="keywords" content="installazione pwa, TERRA v2.3, passaporto etico digitale, PED, Android, Samsung, iPhone, iPad, browser">
+<meta name="author" content="Passaporto Etico Digitale (acronimo PED) di Marzia Neggia">
+<meta name="robots" content="noindex, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Come installare la pwa TERRA v2.3 – Passaporto Etico Digitale (acronimo PED)">
+<meta property="og:description" content="Guida all'installazione manuale della pwa TERRA v2.3, con indicazioni per browser testati e non compatibili.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pwa-terra-v23.vercel.app/come-installare-pwaTERRAv23.html">
+
+<style>
+/* Font locali - nessuna chiamata a Google */
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('AtkinsonHyperlegible-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('AtkinsonHyperlegible-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('AtkinsonHyperlegible-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('AtkinsonHyperlegible-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  background-color: #f5f0e8;
+  color: #2d4121;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 50px 80px 50px;
+}
+
+/* HEADER */
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 40px 0;
+  width: 100%;
+}
+
+.nav-links { display: -webkit-box; display: -ms-flexbox; display: flex; list-style: none; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; width: 100%; }
+.nav-links li { margin-left: 0; }
+nav { width: 85%; }
+
+.nav-links a {
+  text-decoration: none;
+  color: #2d4121;
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.nav-links a:hover { opacity: 0.7; }
+
+/* MAIN */
+main {
+  display: block;
+  padding-top: 20px;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+}
+
+/* CARD INDICE */
+.card-indice {
+  border: 1.5px solid rgba(45, 65, 33, 0.22);
+  background: rgba(255, 255, 255, 0.45);
+  padding: 26px;
+  margin-bottom: 40px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-indice ol {
+  list-style: decimal;
+  padding-left: 20px;
+}
+
+.card-indice ol li {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 2;
+  color: #1a1a1a;
+}
+
+.card-indice ol li a {
+  color: #2d4121;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.card-indice ol li a:hover { opacity: 0.7; }
+
+/* NOTA INIZIALE */
+.nota-iniziale {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #1a1a1a;
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 50px;
+}
+
+/* LISTA CARD */
+.lista-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.card {
+  border: 1.5px solid rgba(45, 65, 33, 0.22);
+  background: rgba(255, 255, 255, 0.45);
+  padding: 26px;
+}
+
+.card-title {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #2d4121;
+  margin-bottom: 6px;
+}
+
+.card-sottotitolo {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  color: rgba(45, 65, 33, 0.7);
+  margin-bottom: 16px;
+}
+
+.testo {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #1a1a1a;
+}
+
+.testo p { margin-bottom: 14px; }
+.testo p:last-child { margin-bottom: 0; }
+
+.testo a {
+  color: #2d4121;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.testo a:hover { opacity: 0.7; }
+
+.testo ul {
+  margin: 0 0 0 22px;
+  list-style: disc;
+}
+
+.testo ul li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+.testo ul li:last-child { margin-bottom: 0; }
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding-top: 40px;
+}
+footer p {
+  font-size: 12px;
+  color: rgba(45, 65, 33, 0.6);
+}
+
+/* TABLET */
+@media screen and (max-width: 1024px) {
+  header { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+  .nav-links { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+  .nav-links li { margin: 8px 12px; }
+  h1 { font-size: 28px; }
+}
+
+/* MOBILE */
+@media screen and (max-width: 600px) {
+  .container { padding: 0 20px 60px 20px; }
+  h1 { font-size: 22px; letter-spacing: 2px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <nav aria-label="Menu principale">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="informazioni.html">Informazioni</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+        <li><a href="sostieni.html">Sostieni</a></li>
+        <li><a href="crediti.html">Crediti</a></li>
+        <li><a href="#">Accedi</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <h1>Come installare la pwa TERRA v2.3</h1>
+
+    <!-- INDICE -->
+    <div class="card-indice">
+      <ol>
+        <li><a href="#browser-consigliati">Browser consigliati</a></li>
+        <li><a href="#altri-browser-android">Altri browser Android</a></li>
+        <li><a href="#dispositivi-samsung">Dispositivi Samsung</a></li>
+        <li><a href="#iphone-ipad">iPhone e iPad</a></li>
+        <li><a href="#browser-non-compatibili">Browser non compatibili</a></li>
+        <li><a href="#aiuta-a-testare">Aiuta a migliorare questa guida</a></li>
+      </ol>
+    </div>
+
+    <!-- NOTA INIZIALE -->
+    <p class="nota-iniziale">Il progetto Passaporto Etico Digitale lavora per rendere la pwa TERRA v2.3 accessibile al maggior numero possibile di dispositivi e browser (inclusione digitale). Tuttavia, l'installazione di un'app web (pwa), come è TERRA v2.3, dipende anche da scelte tecniche dei singoli produttori di smartphone e degli sviluppatori dei browser, che variano da dispositivo a dispositivo. Per questo motivo, alcuni browser elencati di seguito sono suddivisi in base anche ai test reali effettuati su due dispositivi Android, uno meno recente (Android 11) e uno più recente (Android 16).</p>
+
+    <div class="lista-card">
+
+      <!-- 1. BROWSER CONSIGLIATI -->
+      <div class="card" id="browser-consigliati">
+        <div class="card-title">1. Browser consigliati</div>
+        <div class="card-sottotitolo">Testati e funzionanti su sistemi meno recenti (Android 11)</div>
+        <div class="testo">
+          <ul>
+            <li><strong>Chrome</strong> — Aprire il menu (icona con i tre puntini) e toccare "Installa app". Confermare toccando "Installa".</li>
+            <li><strong>Ecosia</strong> — Aprire il menu e toccare "Aggiungi a schermata Home". Confermare toccando "Aggiungi".</li>
+            <li><strong>Internet Browser</strong> — Aprire il menu e toccare "Aggiungi alla schermata iniziale".</li>
+            <li><strong>Vivaldi</strong> — Toccare il simbolo "V" in alto, poi "Aggiungi pagina a" → "Schermata iniziale".</li>
+            <li><strong>Waterfox</strong> — Aprire il menu "Altro" e toccare "Aggiungi app alla schermata principale".</li>
+            <li><strong>Yandex</strong> — Aprire il menu e toccare "Aggiungi collegamento sul desktop".</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 2. ALTRI BROWSER ANDROID -->
+      <div class="card" id="altri-browser-android">
+        <div class="card-title">2. Altri browser Android</div>
+        <div class="card-sottotitolo">Testati e funzionanti su sistemi più recenti (Android 16); non verificati su versioni precedenti</div>
+        <div class="testo">
+          <ul>
+            <li><strong>Adblock Browser</strong> — Aprire il menu e toccare "Aggiungi a schermata", poi "Installa" e infine "Aggiungi".</li>
+            <li><strong>Brave</strong> — Aprire il menu e toccare "Installa", poi confermare con "Aggiungi".</li>
+            <li><strong>DuckDuckGo</strong> — Aprire il menu e toccare "Aggiungi alla schermata Home", poi confermare con "Aggiungi".</li>
+            <li><strong>Edge</strong> — Aprire il menu e toccare "Aggiungi al telefono", poi "Installa".</li>
+            <li><strong>Firefox</strong> — Aprire il menu e toccare "Aggiungi app alla schermata principale", poi confermare con "Aggiungi".</li>
+            <li><strong>Opera</strong> — Aprire il menu e toccare "Aggiungi a schermata iniziale".</li>
+            <li><strong>Samsung Browser</strong> (app, anche su dispositivi non Samsung) — Aprire il menu e toccare "Aggiungi pagina a" → "Schermata Home", poi confermare con "Aggiungi".</li>
+            <li><strong>Tor</strong> — Aprire il menu e toccare "Aggiungi app alla schermata", poi confermare con "Aggiungi".</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 3. DISPOSITIVI SAMSUNG -->
+      <div class="card" id="dispositivi-samsung">
+        <div class="card-title">3. Dispositivi Samsung</div>
+        <div class="card-sottotitolo">Non testato direttamente. Informazioni da fonti online.</div>
+        <div class="testo">
+          <p>Sui dispositivi Samsung ufficiali, il browser preinstallato è Samsung Internet. Per installare TERRA v2.3: toccare l'icona con le tre righe orizzontali (in basso), poi "Aggiungi pagina a" → "Schermata Home".</p>
+        </div>
+      </div>
+
+      <!-- 4. IPHONE E IPAD -->
+      <div class="card" id="iphone-ipad">
+        <div class="card-title">4. iPhone e iPad</div>
+        <div class="card-sottotitolo">Non testato direttamente. Informazioni da fonti online.</div>
+        <div class="testo">
+          <p>Su iPhone e iPad, tutti i browser (Safari, Chrome, Edge e altri) utilizzano lo stesso motore di navigazione imposto da Apple: la procedura di installazione è quindi identica, indipendentemente dal browser utilizzato. Aprire il sito con un browser qualsiasi, toccare l'icona "Condividi" (il quadrato con la freccia verso l'alto) e selezionare "Aggiungi a Home".</p>
+        </div>
+      </div>
+
+      <!-- 5. BROWSER NON COMPATIBILI -->
+      <div class="card" id="browser-non-compatibili">
+        <div class="card-title">5. Browser non compatibili</div>
+        <div class="card-sottotitolo">I seguenti browser, nei test effettuati, non hanno permesso l'installazione o il download della pwa</div>
+        <div class="testo">
+          <ul>
+            <li>Avast Secure Browser</li>
+            <li>Kiwi</li>
+            <li>Savannah</li>
+            <li>UC Browser</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 6. AIUTA A MIGLIORARE QUESTA GUIDA -->
+      <div class="card" id="aiuta-a-testare">
+        <div class="card-title">6. Aiuta a migliorare questa guida</div>
+        <div class="testo">
+          <p>Questa guida nasce anche da test reali, fatti personalmente su un numero limitato di dispositivi e browser: non è possibile verificarli tutti. Se si ha un browser o un dispositivo diverso da quelli elencati, se si nota un problema con un browser indicato come funzionante, o se si vuole semplicemente segnalare un risultato diverso dal proprio test o utilizzo, si può scrivere all'email: <a href="mailto:passaportoeticodigitale@proton.me?subject=Test%20download%20pwa">passaportoeticodigitale@proton.me</a> — oggetto: "Test download pwa". Ogni segnalazione aiuta a rendere questa guida più utile per tutte e tutti.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Passaporto Etico Digitale (PED) — Tutti i diritti riservati</p>
+  </footer>
+</div>
+
+<script src="accessibilita.js"></script>
+<script src="cookie-banner.js"></script>
+
+<!-- ////////// INIZIO AVVISO SITO IN COSTRUZIONE - eliminare questa riga quando il sito è completo ////////// -->
+<script src="wip-banner.js"></script>
+<!-- ////////// FINE AVVISO SITO IN COSTRUZIONE - eliminare questa riga quando il sito è completo ////////// -->
+
+<script>
+/* blocco tasto destro */
+document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+
+/* blocco drag */
+document.addEventListener('dragstart', function(e) { e.preventDefault(); });
+
+/* blocco scorciatoie */
+document.addEventListener('keydown', function(e) {
+  if ((e.ctrlKey || e.metaKey) && ['s','p','u','i','j','c'].includes(e.key.toLowerCase())) { e.preventDefault(); }
+  if (e.key === 'F12') { e.preventDefault(); }
+  if (e.ctrlKey && e.shiftKey && ['i','j','c'].includes(e.key.toLowerCase())) { e.preventDefault(); }
+});
+</script>
+
+</body>
+</html>
