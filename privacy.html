@@ -240,7 +240,7 @@ footer p {
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="informazioni.html">Informazioni</a></li>
-        <li><a href="https://pwaterrav23.vercel.app/" target="_blank" rel="noopener noreferrer">Download PWA</a></li>
+        <li><a href="https://pwaterrav23.vercel.app/" target="_blank" rel="noopener noreferrer">Installa la PWA</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contatti.html">Contatti</a></li>
         <li><a href="sostieni.html">Sostieni</a></li>
@@ -371,8 +371,23 @@ footer p {
           <strong>SUGGERIMENTO TECNICO SUL BROWSER</strong><br>
           Come spiegato in precedenza, i dati sui prodotti si trovano solo nel browser: se si cancella la cache, si perdono. Per evitarlo, alcuni browser permettono di aggiungere il sito alle eccezioni dalla cancellazione automatica dei dati. È consigliato verificare questa opzione nelle impostazioni del proprio browser, se si desidera conservare nel tempo i dati dei prodotti scansionati.<br>
           <br>
-          <strong>ULTERIORE PRECISAZIONE TECNICA (HOSTING)</strong><br>
-Va inoltre precisato che, per poter caricare le pagine della PWA, il fornitore di hosting (Vercel) riceve automaticamente l'indirizzo IP di chi vi accede — è una caratteristica tecnica standard di qualsiasi sito o app web, necessaria al solo funzionamento della connessione. Questo trattamento è già descritto al <a href="#dati">punto 2 (Dati raccolti e finalità del trattamento)</a>, a cui si rimanda per maggiori informazioni.
+          <strong>ULTERIORE PRECISAZIONE TECNICA</strong>
+<ul>
+  <li>Per poter caricare le pagine della PWA, <strong>il fornitore di hosting (Vercel)</strong> riceve automaticamente l'indirizzo IP di chi vi accede — è una caratteristica tecnica standard di qualsiasi sito o app web, necessaria al solo funzionamento della connessione. Questo trattamento è già descritto al <a href="#dati">punto 2 (Dati raccolti e finalità del trattamento)</a>, a cui si rimanda per maggiori informazioni.</li>
+
+  <li><strong>Installazione su Android tramite Chrome o Samsung Internet (meccanismo WebAPK)</strong><br>
+  Quando la pwa TERRA v2.3 viene installata su un dispositivo Android con il browser Chrome oppure tramite Samsung Internet (su un dispositivo Samsung) attraverso il menu del browser o il pulsante "Installa la pwa" presente nel sito (il funzionamento è identico), il browser contatta automaticamente un server (di Google o di Samsung) per generare il pacchetto di installazione dell'app (tecnologia chiamata "WebAPK").
+  <br>
+  Questo passaggio serve a rendere la pwa installata come una vera app del dispositivo e coinvolge unicamente i dati pubblici della pwa (come il suo indirizzo web, il nome e l'icona), non i dati personali dell'utente. Come per qualsiasi comunicazione con un server esterno, vengono trasmessi anche alcuni dati tecnici standard di rete (ad esempio l'indirizzo IP).
+  <br>
+  Per tutti gli altri browser (ad esempio: Firefox, Edge, Opera, Brave, o Samsung Internet su dispositivi non Samsung), questo meccanismo non è previsto. L'installazione crea solo una scorciatoia locale sul dispositivo, senza alcuna comunicazione con server esterni. Questo processo è una caratteristica del browser stesso, indipendente dal codice della pwa TERRA v2.3 e non è gestito né controllato dal Titolare.
+  <br>
+  Se il dispositivo e/o browser è già collegato a un account Google o Samsung (nel caso di Samsung Internet) — cosa che dipende solo da come la/l'utente ha configurato il proprio dispositivo — un eventuale trattamento dei dati legato a quell'account non è gestito né controllato da TERRA v2.3, ma ricade sotto la responsabilità e le informative privacy di <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google</a> o <a href="https://account.samsung.com/membership/terms/privacypolicy" target="_blank" rel="noopener noreferrer">Samsung</a>.
+  <br>TERRA v2.3 non ha accesso a questo account, non lo richiede e non lo utilizza in alcun modo per riconoscere o tracciare la persona.
+  <br>Fonte: <a href="https://web.dev/learn/pwa/installation" target="_blank" rel="noopener noreferrer">documentazione ufficiale Google (web.dev)</a>.</li>
+
+  <li><strong>Il pulsante "Installa la pwa"</strong> presente nel sito non raccoglie e non invia alcun dato: si limita a richiamare la finestra che il browser stesso mostra per chiedere conferma alla persona ("vuoi installare questa app?"). È un'operazione che avviene interamente sul dispositivo dell'utente. Solo dopo la conferma dell'installazione entra in gioco il meccanismo descritto al punto precedente (WebAPK), gestito interamente dal browser e non dal codice della pwa TERRA v2.3.</li>
+</ul>
    <br><br>      
 <strong>FOTOCAMERA</strong><br>
           La fotocamera del dispositivo si attiva solo quando l'utente dà esplicitamente l'autorizzazione. Non si attiva mai automaticamente all'apertura della PWA. Serve unicamente a scansionare il codice a barre, l'etichetta del prodotto e/o il QR code.<br>
