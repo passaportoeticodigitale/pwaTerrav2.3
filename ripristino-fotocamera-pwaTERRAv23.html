@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- SEO -->
+<title>Come ripristinare il permesso della fotocamera per la pwa TERRA v2.3 – Passaporto Etico Digitale (acronimo PED)</title>
+<meta name="description" content="Guida al ripristino manuale del permesso fotocamera per la pwa TERRA v2.3, con indicazioni per i browser Android, i dispositivi Samsung e iPhone/iPad.">
+<meta name="keywords" content="ripristino permesso fotocamera, pwa TERRA v2.3, passaporto etico digitale, PED, Android, Samsung, iPhone, iPad, browser">
+<meta name="author" content="Passaporto Etico Digitale (acronimo PED) di Marzia Neggia">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Come ripristinare il permesso della fotocamera per la pwa TERRA v2.3 – Passaporto Etico Digitale (acronimo PED)">
+<meta property="og:description" content="Guida al ripristino manuale del permesso fotocamera per la pwa TERRA v2.3, con indicazioni per i browser Android, i dispositivi Samsung e iPhone/iPad.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pwa-terra-v23.vercel.app/ripristino-fotocamera-pwaTERRAv23.html">
+
+<style>
+/* Font locali - nessuna chiamata a Google */
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('AtkinsonHyperlegible-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('AtkinsonHyperlegible-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('AtkinsonHyperlegible-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('AtkinsonHyperlegible-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  background-color: #f5f0e8;
+  color: #2d4121;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 50px 80px 50px;
+}
+
+/* HEADER */
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 40px 0;
+  width: 100%;
+}
+
+.nav-links { display: -webkit-box; display: -ms-flexbox; display: flex; list-style: none; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; width: 100%; }
+.nav-links li { margin-left: 0; }
+nav { width: 85%; }
+
+.nav-links a {
+  text-decoration: none;
+  color: #2d4121;
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.nav-links a:hover { opacity: 0.7; }
+
+/* MAIN */
+main {
+  display: block;
+  padding-top: 20px;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: 3px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+}
+
+/* NOTA INIZIALE */
+.nota-iniziale {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #1a1a1a;
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 50px;
+}
+.nota-iniziale a {
+  color: #2d4121;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.nota-iniziale a:hover { opacity: 0.7; }
+
+
+/* CARD INDICE */
+.card-indice {
+  border: 1.5px solid rgba(45, 65, 33, 0.22);
+  background: rgba(255, 255, 255, 0.45);
+  padding: 26px;
+  margin-bottom: 40px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-indice ol {
+  list-style: decimal;
+  padding-left: 20px;
+}
+
+.card-indice ol li {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 2;
+  color: #1a1a1a;
+}
+
+.card-indice ol li a {
+  color: #2d4121;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.card-indice ol li a:hover { opacity: 0.7; }
+
+/* LISTA CARD */
+.lista-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.card {
+  border: 1.5px solid rgba(45, 65, 33, 0.22);
+  background: rgba(255, 255, 255, 0.45);
+  padding: 26px;
+}
+
+.card-title {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #2d4121;
+  margin-bottom: 6px;
+}
+
+.card-sottotitolo {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  color: rgba(45, 65, 33, 0.7);
+  margin-bottom: 16px;
+}
+
+.testo {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #1a1a1a;
+}
+
+.testo p { margin-bottom: 14px; }
+.testo p:last-child { margin-bottom: 0; }
+
+.testo a {
+  color: #2d4121;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.testo a:hover { opacity: 0.7; }
+
+.testo ul {
+  margin: 0 0 0 22px;
+  list-style: disc;
+}
+
+.testo ul li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.testo ul li:last-child { margin-bottom: 0; }
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding-top: 40px;
+}
+footer p {
+  font-size: 12px;
+  color: rgba(45, 65, 33, 0.6);
+}
+
+/* TABLET */
+@media screen and (max-width: 1024px) {
+  header { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+  .nav-links { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+  .nav-links li { margin: 8px 12px; }
+  h1 { font-size: 28px; }
+}
+
+/* MOBILE */
+@media screen and (max-width: 600px) {
+  .container { padding: 0 20px 60px 20px; }
+  h1 { font-size: 22px; letter-spacing: 2px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <nav aria-label="Menu principale">
+      <ul class="nav-links">
+       <li><a href="index.html">Home</a></li>
+        <li><a href="informazioni.html">Informazioni</a></li>
+        <li><a href="https://pwaterrav23.vercel.app/" target="_blank" rel="noopener noreferrer">Installa TERRA v2.3</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+        <li><a href="sostieni.html">Sostieni</a></li>
+        <li><a href="crediti.html">Crediti</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <h1>Come ripristinare il permesso della fotocamera</h1>
+
+    <!-- NOTA INIZIALE -->
+    <p class="nota-iniziale">Questa guida si basa su ricerche online di documentazione pubblica fatte, su prompt specifici, dai <a href="https://pwa-terra-v23.vercel.app/crediti.html#intelligenze-artificiali" target="_blank" rel="noopener noreferrer">cobot Luca (Claude) e Pingoli (Perplexity)</a>. Per ogni browser è indicato se la fonte è ufficiale del produttore oppure no.</p>
+
+    <!-- INDICE -->
+    <div class="card-indice">
+      <ol>
+        <li><a href="#browser-android">Browser Android</a></li>
+        <li><a href="#dispositivi-samsung">Dispositivi Samsung</a></li>
+        <li><a href="#iphone-ipad">iPhone e iPad</a></li>
+        <li><a href="#browser-non-verificati">Browser senza informazioni affidabili</a></li>
+        <li><a href="#aiuta-a-testare">Aiuta a migliorare questa guida</a></li>
+      </ol>
+    </div>
+
+    <div class="lista-card">
+
+      <!-- 1. BROWSER ANDROID -->
+      <div class="card" id="browser-android">
+        <div class="card-title">1. Browser Android</div>
+        <div class="testo">
+          <ul>
+            <li><strong>Adblock Browser</strong> — Impostazioni → Privacy e sicurezza → Impostazioni sito → Camera. Cosa succede dopo: è possibile un accesso diretto alla fotocamera, ma non è confermato con certezza. Fonte: da guide e community.</li>
+            <li><strong>Avast Secure Browser</strong> — Impostazioni → Privacy e sicurezza → Impostazioni sito → Camera. Cosa succede dopo: è possibile un accesso diretto alla fotocamera, ma non è confermato con certezza. Fonte: da guide e community.</li>
+            <li><strong>Brave</strong> — Impostazioni → Impostazioni sito → Camera. Cosa succede dopo: è possibile un accesso diretto alla fotocamera, ma non è confermato con certezza. Fonte: da guide e community.</li>
+            <li><strong>Chrome</strong> — Tre puntini → Impostazioni → Impostazioni sito → Videocamera (in alternativa: icona lucchetto/fotocamera accanto alla barra degli indirizzi → Autorizzazioni). Cosa succede dopo: accesso diretto alla fotocamera, senza nuovo pop-up. Fonte ufficiale: support.google.com</li>
+            <li><strong>DuckDuckGo</strong> — Alcuni utenti segnalano che la fotocamera può risultare non disponibile o avere un comportamento variabile nell'app Android. Fonte: da guide e community.</li>
+            <li><strong>Ecosia</strong> — Tre puntini → Impostazioni → Impostazioni sito → Camera. Cosa succede dopo: è possibile un accesso diretto alla fotocamera, ma non è confermato con certezza. Fonte: da guide e community.</li>
+            <li><strong>Edge</strong> — Menu → Impostazioni → Autorizzazioni sito → Camera. Cosa succede dopo: è possibile un accesso diretto alla fotocamera, ma non è confermato con certezza. Fonte: da guide e community.</li>
+            <li><strong>Firefox</strong> — Icona lucchetto (accanto alla barra degli indirizzi) → Impostazioni sito → Fotocamera. Cosa succede dopo: accesso diretto alla fotocamera, senza nuovo pop-up. Fonte ufficiale: support.mozilla.org</li>
+            <li><strong>Kiwi Browser</strong> — Tre puntini → Impostazioni → Impostazioni sito → Camera (percorso desunto da tutorial di terze parti). Cosa succede dopo: non documentato. Fonte: da guide e community.</li>
+            <li><strong>Opera</strong> — Icona profilo → Impostazioni → Privacy e sicurezza → Impostazioni sito → Camera. Cosa succede dopo: è possibile un accesso diretto alla fotocamera, ma non è confermato con certezza. Fonte: da guide e community.</li>
+            <li><strong>Tor Browser</strong> — La fotocamera è bloccata di default per motivi di privacy; può essere sbloccata da Impostazioni → Privacy e sicurezza → Permessi → Fotocamera. Fonte: da guide e community.</li>
+            <li><strong>Vivaldi</strong> — Menu V → Impostazioni → Pagine web → Impostazioni sito → Camera. Cosa succede dopo: è possibile un accesso diretto alla fotocamera, ma non è confermato con certezza. Fonte: da guide e community.</li>
+            <li><strong>Yandex</strong> — Menu → Impostazioni → Siti web → Impostazioni avanzate sito → Accesso alla fotocamera. Cosa succede dopo: è possibile un accesso diretto alla fotocamera, ma non è confermato con certezza. Fonte: da guide e community.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 2. DISPOSITIVI SAMSUNG -->
+      <div class="card" id="dispositivi-samsung">
+        <div class="card-title">2. Dispositivi Samsung</div>
+        <div class="testo">
+          <p><strong>Samsung Internet</strong> — Menu (tre linee) → Impostazioni → Siti e download → Autorizzazioni per i siti → Camera. Fonte: desunto da più fonti indipendenti coerenti tra loro.</p>
+        </div>
+      </div>
+
+      <!-- 3. IPHONE E IPAD -->
+      <div class="card" id="iphone-ipad">
+        <div class="card-title">3. iPhone e iPad</div>
+        <div class="testo">
+          <ul>
+            <li><strong>Chrome</strong> — Impostazioni iOS → Chrome → Fotocamera (permesso unico per tutta l'app, non per singolo sito). Fonte ufficiale: support.google.com</li>
+            <li><strong>Edge</strong> — Impostazioni iOS → Edge → Fotocamera (permesso unico per tutta l'app). Fonte: da guide e community.</li>
+            <li><strong>Firefox</strong> — Impostazioni iOS → Firefox → Fotocamera (permesso unico per tutta l'app). Fonte: da guide e community.</li>
+            <li><strong>Opera</strong> — Impostazioni iOS → Opera → Fotocamera (permesso unico per tutta l'app). Fonte: da guide e community.</li>
+            <li><strong>Safari</strong> — Impostazioni iOS → Safari → Impostazioni per siti web → Fotocamera (unico browser iOS con gestione per singolo sito). Fonte ufficiale: support.apple.com</li>
+            <li><strong>Altri browser non elencati</strong> — Impostazioni iOS → nome del browser → Fotocamera (permesso unico per tutta l'app, essendo tutti basati sul motore WebKit imposto da Apple). Fonte: da guide e community.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 4. BROWSER SENZA INFORMAZIONI AFFIDABILI -->
+      <div class="card" id="browser-non-verificati">
+        <div class="card-title">4. Browser senza informazioni affidabili</div>
+        <div class="testo">
+          <p>Non è stato trovato un percorso verificabile per questi browser: Internet Browser, Savannah Browser, UC Browser, Waterfox.</p>
+        </div>
+      </div>
+
+      <!-- 5. AIUTA A MIGLIORARE QUESTA GUIDA -->
+      <div class="card" id="aiuta-a-testare">
+        <div class="card-title">5. Aiuta a migliorare questa guida</div>
+        <div class="testo">
+          <p>Questa guida nasce da ricerca fatta dal <a href="https://pwa-terra-v23.vercel.app/crediti.html#intelligenze-artificiali" target="_blank" rel="noopener noreferrer">cobot Luca (Claude) e dal cobot Pingoli (Perplexity)</a>. I percorsi suggeriti non sono stati testati. Se si ha un browser o un dispositivo diverso da quelli elencati, se si nota un problema con un browser indicato qui come funzionante, o se si vuole semplicemente segnalare un risultato diverso dal proprio test o utilizzo, si può scrivere all'email: <a href="mailto:passaportoeticodigitale@proton.me?subject=Test%20download%20pwa">passaportoeticodigitale@proton.me</a> — oggetto: "Test ripristino fotocamera". Ogni segnalazione aiuta a rendere questa guida più utile per tutte e tutti. Grazie.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Passaporto Etico Digitale (PED) — Tutti i diritti riservati</p>
+  </footer>
+</div>
+
+<script src="accessibilita.js"></script>
+<script src="cookie-banner.js"></script>
+
+<!-- ////////// INIZIO AVVISO SITO IN COSTRUZIONE - eliminare questa riga quando il sito è completo ////////// -->
+<script src="wip-banner.js"></script>
+<!-- ////////// FINE AVVISO SITO IN COSTRUZIONE - eliminare questa riga quando il sito è completo ////////// -->
+
+<script>
+/* blocco tasto destro */
+document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+
+/* blocco drag */
+document.addEventListener('dragstart', function(e) { e.preventDefault(); });
+
+/* blocco scorciatoie */
+document.addEventListener('keydown', function(e) {
+  if ((e.ctrlKey || e.metaKey) && ['s','p','u','i','j','c'].includes(e.key.toLowerCase())) { e.preventDefault(); }
+  if (e.key === 'F12') { e.preventDefault(); }
+  if (e.ctrlKey && e.shiftKey && ['i','j','c'].includes(e.key.toLowerCase())) { e.preventDefault(); }
+});
+</script>
+
+</body>
+</html>
