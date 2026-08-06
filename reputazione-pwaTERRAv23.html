@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- SEO -->
+<title>Possibile segnalazione di reputazione bassa della pwa TERRA v2.3 - Passaporto Etico Digitale (acronimo PED)</title>
+<meta name="description" content="Spiegazione del perché alcuni antivirus possono segnalare una reputazione bassa per la pwa TERRA v2.3, con verifiche di sicurezza effettuate tramite link-checker indipendenti.">
+<meta name="keywords" content="reputazione bassa, antivirus, pwa TERRA v2.3, passaporto etico digitale, PED, link checker, sicurezza">
+<meta name="author" content="Passaporto Etico Digitale (acronimo PED) di Marzia Neggia">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Possibile segnalazione di reputazione bassa della pwa TERRA v2.3 - Passaporto Etico Digitale (acronimo PED)">
+<meta property="og:description" content="Spiegazione del perché alcuni antivirus possono segnalare una reputazione bassa per la pwa TERRA v2.3, con verifiche di sicurezza effettuate tramite link-checker indipendenti.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pwa-terra-v23.vercel.app/reputazione-pwaTERRAv23.html">
+
+<style>
+/* Font locali - nessuna chiamata a Google */
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('AtkinsonHyperlegible-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('AtkinsonHyperlegible-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('AtkinsonHyperlegible-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('AtkinsonHyperlegible-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  background-color: #f5f0e8;
+  color: #2d4121;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 50px 80px 50px;
+}
+
+/* HEADER */
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 40px 0;
+  width: 100%;
+}
+
+.nav-links { display: -webkit-box; display: -ms-flexbox; display: flex; list-style: none; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; width: 100%; }
+.nav-links li { margin-left: 0; }
+nav { width: 85%; }
+
+.nav-links a {
+  text-decoration: none;
+  color: #2d4121;
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.nav-links a:hover { opacity: 0.7; }
+
+/* MAIN */
+main {
+  display: block;
+  padding-top: 20px;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+}
+
+/* CARD INDICE */
+.card-indice {
+  border: 1.5px solid rgba(45, 65, 33, 0.22);
+  background: rgba(255, 255, 255, 0.45);
+  padding: 26px;
+  margin-bottom: 40px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-indice ol {
+  list-style: decimal;
+  padding-left: 20px;
+}
+
+.card-indice ol li {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 2;
+  color: #1a1a1a;
+}
+
+.card-indice ol li a {
+  color: #2d4121;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.card-indice ol li a:hover { opacity: 0.7; }
+
+/* LISTA CARD */
+.lista-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.card {
+  border: 1.5px solid rgba(45, 65, 33, 0.22);
+  background: rgba(255, 255, 255, 0.45);
+  padding: 26px;
+}
+
+.card-title {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #2d4121;
+  margin-bottom: 6px;
+}
+
+.card-sottotitolo {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  color: rgba(45, 65, 33, 0.7);
+  margin-bottom: 16px;
+}
+
+.testo {
+  font-family: 'Atkinson Hyperlegible', Verdana, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #1a1a1a;
+}
+
+.testo p { margin-bottom: 14px; }
+.testo p:last-child { margin-bottom: 0; }
+
+.testo a {
+  color: #2d4121;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.testo a:hover { opacity: 0.7; }
+
+.testo ul {
+  margin: -8px 0 0 22px;
+  list-style: disc;
+}
+
+.testo ul li {
+  margin-bottom: 2px;
+  line-height: 1.6;
+}
+.testo ul li:last-child { margin-bottom: 0; }
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding-top: 40px;
+}
+footer p {
+  font-size: 12px;
+  color: rgba(45, 65, 33, 0.6);
+}
+
+/* TABLET */
+@media screen and (max-width: 1024px) {
+  header { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+  .nav-links { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+  .nav-links li { margin: 8px 12px; }
+  h1 { font-size: 28px; }
+}
+
+/* MOBILE */
+@media screen and (max-width: 600px) {
+  .container { padding: 0 20px 60px 20px; }
+  h1 { font-size: 22px; letter-spacing: 2px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <nav aria-label="Menu principale">
+      <ul class="nav-links">
+       <li><a href="index.html">Home</a></li>
+        <li><a href="informazioni.html">Informazioni</a></li>
+        <li><a href="https://pwaterrav23.vercel.app/" target="_blank" rel="noopener noreferrer">Installa TERRA v2.3</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+        <li><a href="sostieni.html">Sostieni</a></li>
+        <li><a href="crediti.html">Crediti</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <h1>Possibile segnalazione di reputazione bassa</h1>
+
+    <!-- INDICE -->
+    <div class="card-indice">
+      <ol>
+        <li><a href="#perche-puo-succedere">Perché può succedere</a></li>
+        <li><a href="#verifiche-sicurezza">Verifiche di sicurezza effettuate</a></li>
+         <li><a href="#aiuta-a-testare">Aiuta a migliorare questa guida</a></li>
+      </ol>
+    </div>
+
+    <div class="lista-card">
+
+      <!-- 1. PERCHÉ PUÒ SUCCEDERE -->
+      <div class="card" id="perche-puo-succedere">
+        <div class="card-title">1. Perché può succedere</div>
+        <div class="testo">
+          <p>Quando si installa la pwa TERRA v2.3, in alcuni casi, alcuni antivirus (per esempio, per un uso aziendale o professionale) possono segnalare una "reputazione bassa" per siti nuovi o ancora poco conosciuti. Questo non significa che sia stata rilevata una minaccia reale, ma che il sito non è ancora presente nei database di alcuni sistemi di sicurezza.</p>
+          <p>Alcuni fattori che possono contribuire a questa segnalazione sono:</p>
+          <ul>
+            <li>I sistemi di reputazione web dei diversi antivirus sono indipendenti tra loro. Ognuno ha le proprie logiche. Per questo può capitare che un vendor segnali cautela mentre altri diano esito pulito sullo stesso sito.</li>
+            <li>Domini condivisi come vercel.app ospitano migliaia di progetti diversi: se anche un solo progetto (ospitato sullo stesso dominio) viene segnalato, alcuni sistemi di sicurezza possono penalizzare l'intero dominio condiviso, indipendentemente dal contenuto del singolo progetto.</li>
+            <li>Un sito nuovo, con poco traffico e poco storico, può risultare semplicemente "non ancora conosciuto" da alcuni database di sicurezza. È uno stato di cautela per mancanza di informazioni, non un rilevamento di una minaccia reale.</li>
+          </ul>
+          <p>Va inoltre precisato un aspetto tecnico: le pwa (Progressive Web App) come TERRA v2.3 non passano dal meccanismo "installa da fonti sconosciute" che riguarda le APK scaricate manualmente. È il browser stesso a generare il pacchetto di installazione (tecnologia chiamata WebAPK). La segnalazione di alcuni antivirus non è quindi legata a Google Play Protect, ma a un sistema di reputazione web indipendente del singolo antivirus.</p>
+        </div>
+      </div>
+
+      <!-- 2. VERIFICHE DI SICUREZZA EFFETTUATE -->
+      <div class="card" id="verifiche-sicurezza">
+        <div class="card-title">2. Verifiche di sicurezza effettuate</div>
+        <div class="testo">
+          <p>Per i motivi sopra citati e per dare una certa sicurezza, si è verificato, in modo trasparente, come viene valutato il sito da strumenti online indipendenti. Così l'indirizzo web della pwa TERRA v2.3 è stato testato con i servizi di link-checker dei seguenti antivirus. L'esito è stato positivo:</p>
+          <ul>
+            <li><a href="https://www.bitdefender.com/it-it/consumer/link-checker" target="_blank" rel="noopener noreferrer">Bitdefender</a></li>
+            <li><a href="https://www.eset.com/it/privati/link-checker/" target="_blank" rel="noopener noreferrer">ESET</a></li>
+            <li><a href="https://safeweb.norton.com/" target="_blank" rel="noopener noreferrer">Norton Safe Web</a></li>
+            <li><a href="https://global.sitesafety.trendmicro.com/index.php" target="_blank" rel="noopener noreferrer">Trend Micro</a></li>
+          </ul>
+          
+          <p>Chiunque può verificare autonomamente l'indirizzo con questi stessi strumenti, cliccando direttamente sul nome del vendor.</p>
+        </div>
+        </div>
+
+         <!-- 3. AIUTA A MIGLIORARE QUESTA GUIDA -->
+      <div class="card" id="aiuta-a-testare">
+        <div class="card-title">3. Aiuta a migliorare questa guida</div>
+        <div class="testo">
+          <p>Questa guida nasce anche da test reali. Se si nota un problema o se si vuole semplicemente segnalare un risultato diverso, si può scrivere all'email: <a href="mailto:passaportoeticodigitale@proton.me?subject=Test%20download%20pwa">passaportoeticodigitale@proton.me</a> — oggetto: "Reputazione pwa TERRA v2.3". Ogni segnalazione aiuta a rendere questa guida più utile per tutte e tutti. Grazie.</p>
+         </div>
+
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Passaporto Etico Digitale (PED) — Tutti i diritti riservati</p>
+  </footer>
+</div>
+
+<script src="accessibilita.js"></script>
+<script src="cookie-banner.js"></script>
+
+<!-- ////////// INIZIO AVVISO SITO IN COSTRUZIONE - eliminare questa riga quando il sito è completo ////////// -->
+<script src="wip-banner.js"></script>
+<!-- ////////// FINE AVVISO SITO IN COSTRUZIONE - eliminare questa riga quando il sito è completo ////////// -->
+
+<script>
+/* blocco tasto destro */
+document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+
+/* blocco drag */
+document.addEventListener('dragstart', function(e) { e.preventDefault(); });
+
+/* blocco scorciatoie */
+document.addEventListener('keydown', function(e) {
+  if ((e.ctrlKey || e.metaKey) && ['s','p','u','i','j','c'].includes(e.key.toLowerCase())) { e.preventDefault(); }
+  if (e.key === 'F12') { e.preventDefault(); }
+  if (e.ctrlKey && e.shiftKey && ['i','j','c'].includes(e.key.toLowerCase())) { e.preventDefault(); }
+});
+</script>
+
+</body>
+</html>
